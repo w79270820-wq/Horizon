@@ -5,241 +5,200 @@ date: 2026-05-09
 lang: zh
 ---
 
-> From 39 items, 10 important content pieces were selected
+> From 11 items, 8 important content pieces were selected
 
 ---
 
-1. [人工智能瓦解两种漏洞文化](#item-1) ⭐️ 9.0/10
-2. [Google reCAPTCHA 更新封锁去谷歌化安卓用户](#item-2) ⭐️ 8.0/10
-3. [研究显示委托 LLM 处理文档会导致内容退化](#item-3) ⭐️ 8.0/10
-4. [HTML 与 Markdown 在 LLM 输出中的比较](#item-4) ⭐️ 8.0/10
-5. [数学家测试 ChatGPT 5.5 Pro 的推理能力](#item-5) ⭐️ 8.0/10
-6. [React2Shell 漏洞完整披露细节](#item-6) ⭐️ 8.0/10
-7. [Anthropic 教会 Claude 规则背后的'为什么'](#item-7) ⭐️ 8.0/10
-8. [EMO：通过预训练混合专家模型实现涌现模块化](#item-8) ⭐️ 8.0/10
-9. [12GB 显存实现 80 tok/s 和 128K 上下文：Qwen3.6 35B A3B 与 llama.cpp MTP](#item-9) ⭐️ 8.0/10
-10. [Claude Mythos 在 Firefox 加固中证明价值](#item-10) ⭐️ 8.0/10
+1. [互联网档案馆瑞士站作为独立数字图书馆启动](#item-1) ⭐️ 8.0/10
+2. [Google 破坏了去 Google 化的 Android 用户的 reCAPTCHA](#item-2) ⭐️ 8.0/10
+3. [LLMs 通过改写破坏文档，类似 JPEG 压缩退化](#item-3) ⭐️ 8.0/10
+4. [数学家反思 ChatGPT 5.5 Pro 在研究中的应用](#item-4) ⭐️ 8.0/10
+5. [AI 正在打破两种漏洞披露文化](#item-5) ⭐️ 8.0/10
+6. [教会 AI 模型内化推理规则](#item-6) ⭐️ 8.0/10
+7. [WebRTC 丢包设计与 LLM 音频需求冲突](#item-7) ⭐️ 8.0/10
+8. [LLM 输出格式：HTML 优于 Markdown 的提示工程新见解](#item-8) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [人工智能瓦解两种漏洞文化](https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures) ⭐️ 9.0/10
+## [互联网档案馆瑞士站作为独立数字图书馆启动](https://internetarchive.ch/) ⭐️ 8.0/10
 
-人工智能正在加速补丁分析和漏洞利用生成，打破了漏洞研究中协调披露与优先利用之间的传统分野。 这使攻击者占据优势，缩短了防御者的修补窗口，可能迫使业界重新审视披露时间表和安全实践。 基于 LLM 的系统等工具现可在 15 分钟内从 CVE 公告生成可用的利用代码，近期 AI 生成利用的研究已证明这一点。这一变化不仅由 AI 驱动，还得益于软件透明度的提高和逆向工程能力的增强。
+互联网档案馆瑞士站已作为独立数字图书馆启动，与互联网档案馆、互联网档案馆加拿大站和互联网档案馆欧洲站一道加入分布式网络，以加强全球数字保存。 此次启动增强了数字保存工作的韧性和独立性，减少了对单一组织的依赖，并推广了能够更好抵御政治或技术威胁的分布式模式。 该瑞士实体与母公司共享董事会成员，如 Brewster Kahle 和 Caslon，但以法律上独立的组织运作。站点位于圣加仑，一个历史悠久的档案知识中心。
 
-hackernews · speckx · May 8, 17:55 · [社区讨论](https://news.ycombinator.com/item?id=48066524)
+hackernews · hggh · May 9, 12:00 · [社区讨论](https://news.ycombinator.com/item?id=48074265)
 
-**背景**: “两种漏洞文化”指对立的两派哲学：一派主张与厂商协调披露，在公开前进行修补；另一派则优先快速发布利用代码以施压或用于攻击。AI 快速分析补丁并生成利用的能力削弱了延迟披露的优势，因为攻击者可几乎即时武器化修复方案。
+**背景**: 互联网档案馆是一家位于美国的非营利数字图书馆，由 Brewster Kahle 于 1996 年创立，以 Wayback Machine 闻名。分布式数字保存网络（如使用 LOCKSS 协议）确保数据在全球存在多个副本。像互联网档案馆瑞士站这样的独立附属组织有助于构建韧性、去中心化的保存基础设施。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://aicio.ai/p/the-shrinking-window-of-defense">When AI Turns Exploits into a Commodity</a></li>
-<li><a href="https://studioonenetworks.com/ai-speeds-hacking-exploits-minutes-2025/">New AI System Creates Hacking Exploits in under 15 Minutes</a></li>
-<li><a href="https://www.theregister.com/2025/04/21/ai_models_can_generate_exploit/">AI models can generate exploit code at lightning speed • The Register</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Internet_Archive">Internet Archive - Wikipedia</a></li>
+<li><a href="https://digital-preservation-coalition.github.io/learning/resources/a-guide-to-distributed-digital-preservation/index.html">A Guide to Distributed Digital Preservation</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: tptacek 等评论者指出这一变化因软件透明度提高而早已被预见，freeqaz 以 Log4Shell 时间线为例说明。rikafurude21 认为这是老问题的新表述，而 Animats 强调了地缘政治网络战背景，警告 AI 加速攻击的速度超过了防御响应能力。
+**社区讨论**: 评论者注意到运营整合（与 IA 加拿大站共享 Slack、电子邮件域名）与法律独立性之间的张力。一些人认为圣加仑选址具有象征意义，与数百年历史的修道院档案相联。其他人则对与美国实体实际分离的程度表示好奇。
 
-**标签**: `#cybersecurity`, `#AI`, `#vulnerability disclosure`, `#LLMs`, `#software security`
+**标签**: `#internet-archive`, `#digital-preservation`, `#distributed-systems`, `#libraries`, `#switzerland`
 
 ---
 
 <a id="item-2"></a>
-## [Google reCAPTCHA 更新封锁去谷歌化安卓用户](https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users) ⭐️ 8.0/10
+## [Google 破坏了去 Google 化的 Android 用户的 reCAPTCHA](https://reclaimthenet.org/google-broke-recaptcha-for-de-googled-android-users) ⭐️ 8.0/10
 
-此举限制了注重隐私的用户访问使用 reCAPTCHA 的网站，可能促使他们进一步转向自托管或替代服务，并引发了对远程证明成为网络浏览默认要求的广泛担忧。 新的 reCAPTCHA 利用 Play Integrity API 和硬件支持的证明，将设备身份与证明密钥绑定，而去谷歌化手机（例如使用 microG 或沙盒版 Play Services）无法满足这一要求。这呼应了已被放弃的 Web Environment Integrity（WEI）提案。
+谷歌更新了其 reCAPTCHA 服务，依赖远程证明和 Play Integrity，从而有效屏蔽了缺乏官方 Google Play 服务的去谷歌化 Android 设备。 这一变化迫使那些通过去谷歌化设备来优先考虑隐私的用户要么放弃访问许多网站，要么通过安装谷歌服务来放弃隐私。这凸显了用户控制与谷歌反滥用措施之间日益紧张的关系。 新版 reCAPTCHA 使用远程证明（将设备身份与烧录的硬件密钥绑定）和 Play Integrity 来验证设备是否运行带有谷歌服务的认证 Android 版本。没有沙盒 Play Services 的去谷歌化 ROM（如 LineageOS 或 GrapheneOS）无法通过此检查。
 
 hackernews · anonymousiam · May 8, 18:45 · [社区讨论](https://news.ycombinator.com/item?id=48067119)
 
-**背景**: 去谷歌化安卓是指移除或替换 Google 专有服务的自定义 ROM 或修改系统，通常用于保护隐私或获得更多控制权。远程证明是一种基于硬件的验证技术，用于证明设备软件栈未被篡改；它是可信计算的核心组件，但因可能用于数字版权管理而备受争议。Google 此前曾提出 Web Environment Integrity（WEI）来验证浏览器和设备的完整性，该提案在遭到大量批评后被放弃。
+**背景**: 去谷歌化 Android 指通过自定义 ROM 或设备移除谷歌专有应用和服务以增强隐私。远程证明是一种加密过程，设备使用可信平台模块（TPM）或类似硬件向远程服务器证明其完整性。谷歌的 Play Integrity API（前身为 SafetyNet）检查设备和应用真实性以防止欺诈。通过结合这些技术，谷歌可以确保 reCAPTCHA 挑战仅提供给受信任的、经谷歌认证的设备。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Remote_attestation">Remote attestation</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Web_Environment_Integrity">Web Environment Integrity - Wikipedia</a></li>
-<li><a href="https://www.fsf.org/blogs/community/web-environment-integrity-is-an-all-out-attack-on-the-free-internet">"Web Environment Integrity" is an all-out attack on the free Internet — Free Software Foundation — Working together for free software</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Play_Integrity_API">Play Integrity API</a></li>
+<li><a href="https://itsfoss.com/android-distributions-roms/">5 De-Googled Android-based Operating Systems - It's FOSS I de-Googled my Android phone and actually liked it - How-To Geek I tried completely de-Googled Android — here's what happened 9 Best Degoogled Phones | True Stock Android Without Tracking e Foundation - deGoogled unGoogled smartphone operating ... De-googled phones | Private Phone Shop Top DeGoogled Phones OS Compared - Efani</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者表达了沮丧并提供了技术见解，指出新的 reCAPTCHA 实际上就是远程证明，有用户详细描述了密钥链（EK → AIK → 证明）。其他人强调，许多去谷歌化用户仍在使用 Play Services 的变体（沙盒版或 microG），这一变化可能进一步加剧碎片化或促使用户迁移到自托管服务。另一条评论批评 Cloudflare 使用二维码验证作为一种 KYC 形式，称其荒谬。
+**社区讨论**: 评论者表示沮丧，指出新系统通过要求 SIM 卡或谷歌账户实际上强制了 KYC（了解你的客户）。一些人指出，即使是使用沙盒 Play Services 的用户也可能受到影响，此举将用户推向更受限的生态系统。其他人辩护称这一变化对防欺诈是必要的，但总体情绪是负面的。
 
-**标签**: `#Android`, `#reCAPTCHA`, `#privacy`, `#Google`, `#remote attestation`
+**标签**: `#Android`, `#Privacy`, `#reCAPTCHA`, `#Google`, `#Attestation`
 
 ---
 
 <a id="item-3"></a>
-## [研究显示委托 LLM 处理文档会导致内容退化](https://arxiv.org/abs/2604.15597) ⭐️ 8.0/10
+## [LLMs 通过改写破坏文档，类似 JPEG 压缩退化](https://arxiv.org/abs/2604.15597) ⭐️ 8.0/10
 
-一项新研究论文表明，使用 LLM 处理文档任务（如重写或摘要）会导致内容逐渐退化，每次处理都会损失精度和细微差别。 这一发现至关重要，因为它挑战了将文档工作流委托给 AI 代理的日益增长的趋势，揭示了可能影响科学论文、法律文件和其他高风险内容的基本局限性。 论文指出，即使使用基本工具（文件读写、代码执行），内容退化仍然存在，这与工具能缓解问题的预期相反。
+一篇新论文表明，使用 LLM 编辑文档会导致可测量的语义退化，每经过一次改写，文档的细微差别和精确性就会降低，类似于反复 JPEG 压缩。 这揭示了将文档编辑委托给 LLM 的关键风险，尤其是在科学论文或法律文本等对精确性要求极高的领域。它质疑了 LLM 无需人类监督即可可靠处理此类任务的假设。 该论文使用约 15000 令牌的真实文档对前沿 LLM 进行评估，通过可逆步骤链来测量保真度。它指出，即使使用工具，语义退化仍然存在，尽管代理实现较为基础。
 
 hackernews · rbanffy · May 9, 08:44 · [社区讨论](https://news.ycombinator.com/item?id=48073246)
 
-**背景**: LLM 被训练来预测下一个词元，使其成为训练数据的有损压缩器。当反复应用于相同内容时，它们倾向于回归均值，消除独特细节和意图——类似于反复保存 JPEG 图像。
+**背景**: LLM 是能够改写和编辑文本的语言模型，但它们倾向于向常见措辞'均值回归'，从而丢失特殊性。这种现象被称为'语义消融'或'上下文腐烂'，类似于有损压缩伪影，每次迭代都会降低质量。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">ChatGPT Is a Blurry JPEG of the Web | The New Yorker LLMs are lossy zip file of the internet - Damien Henry LANGUAGE MODELING IS COMPRESSION - proceedings.iclr.cc GitHub - google-deepmind/language_modeling_is_compression The Lossy Encyclopedia: A Critical Analysis of Knowledge ... Why Your LLM is a "Lossy Encyclopedia" - algustionesa.com</a></li>
+<li><a href="https://arxiv.org/abs/2604.15597">[2604.15597] LLMs Corrupt Your Documents When You Delegate</a></li>
+<li><a href="https://www.morphllm.com/context-rot">Context Rot: Why LLMs Degrade as Context Grows (Complete Guide)</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论将其比作有损压缩，用户主张最小化 LLM 干预，并指出 AI 生成的代码缺乏深度。一位用户对工具未能帮助感到惊讶，另一位用户创造了术语'语义消融'来描述这种退化。
+**社区讨论**: 评论者普遍认同研究结果，其中一位提出了'语义消融'这一恰当术语。另一位则对工具使用结果表示怀疑，认为基础实现可能未反映最佳实践。
 
-**标签**: `#LLMs`, `#document corruption`, `#AI agents`, `#research`, `#limitations`
+**标签**: `#LLMs`, `#document corruption`, `#semantic degradation`, `#AI safety`
 
 ---
 
 <a id="item-4"></a>
-## [HTML 与 Markdown 在 LLM 输出中的比较](https://twitter.com/trq212/status/2052809885763747935) ⭐️ 8.0/10
+## [数学家反思 ChatGPT 5.5 Pro 在研究中的应用](https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/) ⭐️ 8.0/10
 
-一位用户分享了使用 HTML 而非 Markdown 生成 LLM 文档的见解，指出 HTML 在布局和交互性方面更优。相关演示以及 Simon Willison 的博文强调了 HTML 在 AI 生成内容中的'出奇效果'。 这一讨论很重要，因为输出格式的选择影响人类编辑和共享 AI 生成内容的方式。HTML 提供更丰富的布局，但相比 Markdown 降低了人类可编辑性，从而影响技术文档和协作写作的工作流程。 演示页面展示了使用单文件无依赖 HTML 构建的交互式元素，如嵌入式 PDF 渲染器。社区成员指出，HTML 文件可以通过电子邮件或托管轻松共享，而 Markdown 更易于人工编辑。
+数学家 Timothy Gowers 讲述了使用 ChatGPT 5.5 Pro 解决组合问题的经历，该模型经过 17 分钟推理后得出了一个二次上界。 这一经历引发了关于 LLM 在数学研究和教育中作用的批判性思考，表明 AI 现在可以解决曾被视为博士生入门难度的问题，可能重塑研究和教学方式。 ChatGPT 5.5 Pro 是最新的 Pro 级别模型，提供无限使用和专业级工具；Gowers 指出其风格略显冗长，并要求其生成类似典型预印本的 LaTeX 文件。
 
-hackernews · pretext · May 9, 04:53 · [社区讨论](https://news.ycombinator.com/item?id=48071940)
+hackernews · _alternator_ · May 9, 02:41 · [社区讨论](https://news.ycombinator.com/item?id=48071262)
 
-**背景**: Claude Code 是 Anthropic 开发的智能编码工具，可协助开发者编辑代码和运行命令。像 Claude 这样的大型语言模型（LLM）可以生成结构化文档；通常用户要求 Markdown 格式，但 HTML 在视觉渲染方面提供了更多控制。'HTML 的出奇效果'这一说法指的是 LLM 能够通过简单提示生成复杂 HTML 页面的能力。
+**背景**: 大型语言模型（LLM）已越来越多地应用于数学领域，但其可靠性仍有争议。Timothy Gowers 是著名数学家、菲尔兹奖得主，以组合数学研究闻名。ChatGPT 5.5 Pro 代表了 AI 推理能力的重大进步。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
+<li><a href="https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/">A recent experience with ChatGPT 5.5 Pro | Gowers's Weblog</a></li>
+<li><a href="https://chatgpt.com/plans/pro/">ChatGPT Plan | Pro</a></li>
+<li><a href="https://sesamedisk.com/chatgpt-5-5-pro-review-2026/">ChatGPT 5.5 Pro Review 2026: Deep Context and Agentic ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论表达了不同观点：一些人偏好 Markdown 以便人类编辑，另一些人强调 HTML 易于共享且功能更丰富。有用户指出 HTML 文件无需托管即可通过电子邮件发送并在任何浏览器中打开。另一位用户提到自己在构建 PDF 编辑器时偶然发现了 HTML 输出的优点。
+**社区讨论**: 社区讨论既表达了热情也强调了谨慎：一些研究人员称赞 LLM 能捕捉细微错误并揭示联系，而另一些人则指出概念性错误仍需人类专业知识。引用的 Baez 评论质疑，当 AI 自动化思想生成时，思想的价值究竟源于稀缺性还是实用性。
 
-**标签**: `#Claude`, `#AI-generated content`, `#HTML`, `#Markdown`, `#LLM tools`
+**标签**: `#AI`, `#LLM`, `#mathematics`, `#research`, `#education`
 
 ---
 
 <a id="item-5"></a>
-## [数学家测试 ChatGPT 5.5 Pro 的推理能力](https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/) ⭐️ 8.0/10
+## [AI 正在打破两种漏洞披露文化](https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures) ⭐️ 8.0/10
 
-数学家 Tim Gowers 在一篇博客文章中详细描述了他使用 ChatGPT 5.5 Pro 的体验，发现它能解决博士级别的问题，但也引发了对培养新研究者的担忧。 随着大语言模型在专业领域接近人类推理水平，传统上用“简单问题”训练博士生的方法可能过时，从而重塑研究教育。 Gowers 指出 ChatGPT 5.5 Pro 解决了他认为对新博士生有挑战的问题，但模型仍会出现概念性错误，只有专家才能发现，这凸显了人类监督的必要性。
+一篇博文指出，AI 和软件透明度的提升正在瓦解传统的两种漏洞披露文化模式，迫使漏洞报告和修补方式发生转变。 这一变化影响所有软件厂商和安全研究人员，因为 AI 能够更快地利用公开提交中的漏洞，可能缩短修补窗口并增加反应缓慢组织的风险。 这两种文化分别是协调披露（私下通知并设定固定保密期，通常为 90 天）和完全公开（立即公开发布）。AI 工具现在可以自动识别并利用公开补丁中的漏洞，削弱了保密期的有效性。
 
-hackernews · _alternator_ · May 9, 02:41 · [社区讨论](https://news.ycombinator.com/item?id=48071262)
+hackernews · speckx · May 8, 17:55 · [社区讨论](https://news.ycombinator.com/item?id=48066524)
 
-**背景**: ChatGPT 5.5 Pro 是 OpenAI 语言模型的假设性未来版本，在 2026 年的博客文章中被描述为关于高级 LLM 能力的思想实验。当前的模型如 GPT-4 和 Gemini 已经能够协助研究人员完成检查方程和提示联系等任务，但它们经常出错，需要领域专业知识才能识别。
+**背景**: 传统上，漏洞披露遵循两种主要文化：协调披露（研究人员私下通知供应商，给予修补时间后再公开）和完全公开（立即公开发布漏洞以施压供应商）。开源软件的普及和高级逆向工程工具的兴起使攻击者更容易发现漏洞。AI 现在通过自动化补丁差异分析和利用生成进一步加速了这一过程。
 
-**社区讨论**: 评论者们分享了不同观点：一位物理学教授发现 Gemini 有助于捕捉错误，但也存在概念性错误；其他人则讨论了这对研究原创性和思想价值的影响。John Baez 的评论质疑思考的价值来自稀缺性还是实用性，暗示 AI 可能使思想生成民主化。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures">AI is Breaking Two Vulnerability Cultures</a></li>
+<li><a href="https://www.bugcrowd.com/blog/vulnerability-disclosure-policy-what-is-it-why-is-it-important/">Vulnerability Disclosure Policy: What is It & Why is it... | @Bugcrowd</a></li>
 
-**标签**: `#AI`, `#LLM`, `#Research`, `#Education`, `#ChatGPT`
+</ul>
+</details>
+
+**社区讨论**: tptacek 等知名安全专家的评论指出，向软件透明度的转变多年来一直被预测，与 AI 无关。其他人则讨论实际解决方案：pvtmert 建议私有补丁共享，而 rikafurude21 警告不要将问题完全归咎于 AI，指出补丁差异分析在 LLM 之前就已存在。freeqaz 以 Log4Shell 事件为例，说明公开提交导致零日漏洞利用的现实案例。
+
+**标签**: `#security`, `#AI`, `#vulnerability disclosure`, `#open source`, `#software transparency`
 
 ---
 
 <a id="item-6"></a>
-## [React2Shell 漏洞完整披露细节](https://lachlan.nz/blog/the-react2shell-story/) ⭐️ 8.0/10
+## [教会 AI 模型内化推理规则](https://www.anthropic.com/research/teaching-claude-why) ⭐️ 8.0/10
 
-安全研究员 Lachlan 发布了一篇关于 React2Shell 漏洞的详细文章，包括其发现过程以及与 Meta 的负责任披露流程。 React2Shell 是 React 服务端组件中的一个高影响力漏洞，已被积极利用，据报道有超过 111,000 个 IP 地址存在漏洞，引发了对 React 应用服务端安全性的重大担忧。 该漏洞影响 React 服务端组件 (RSC)，可导致远程代码执行。调查过程中，研究人员与 Meta 安全团队进行了广泛合作以验证修复方案。
+Anthropic 发布研究，表明通过训练 AI 模型内化推理规则，仅用 300 万个 token 的数据就能显著降低对齐错误，并在 Llama 3.1 8B 和 Qwen 2.5 32B 等开放模型上得到验证。 该方法为 AI 对齐提供了一条更高效的路径，可能以最小的计算开销实现安全技术的更广泛应用，并回应了对强大模型中新兴不良行为的担忧。 该方法名为“模型规范中间训练”，仅用 300 万个 token 的训练数据就能大幅降低错位率，并且已公开发布微调后的开放权重模型以促进进一步研究。
 
-hackernews · mufeedvh · May 8, 16:39 · [社区讨论](https://news.ycombinator.com/item?id=48065511)
+hackernews · pretext · May 8, 17:59 · [社区讨论](https://news.ycombinator.com/item?id=48066592)
 
-**背景**: React 服务端组件是一种允许组件仅在服务端运行的功能，可减少客户端 JavaScript。React2Shell 漏洞利用该架构注入恶意 shell 命令，导致服务器远程代码执行。
+**背景**: 内化推理是指训练模型将推理链嵌入其潜在空间，绕过显式的思维链以提高效率和控制力。对齐研究旨在确保 AI 系统符合人类价值观，但传统方法需要大量数据集。这项工作表明，针对推理规则的有针对性训练可以用最少的数据实现对齐。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://thehackernews.com/2025/12/react2shell-vulnerability-actively.html">React2Shell Vulnerability Actively Exploited to Deploy Linux</a></li>
-<li><a href="https://syntackle.com/blog/react2shell-vulnerabilities/">React2Shell Vulnerabilities — What to do?</a></li>
+<li><a href="https://huggingface.co/learn/agents-course/unit1/thoughts">Thought: Internal Reasoning and the ReAct Approach · Hugging Face</a></li>
+<li><a href="https://www.emergentmind.com/topics/latent-reasoning">Latent Reasoning in Neural Models</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区赞扬了研究员的专业精神，Meta 员工 Rauchg 感谢他为保障生态系统安全所做的贡献。部分评论者对 React 服务端组件表示质疑，认为前后端界限模糊是一个设计问题。
+**社区讨论**: 评论者指出，该结果可推广到 Claude 之外的开放模型，并发布了针对各种玩具价值观微调的版本。有人质疑对齐定义是否充分，引用劳动价值毁灭等风险。其他人则对个人能用如此高效的方法自行对齐模型表示乐观。
 
-**标签**: `#security`, `#react`, `#vulnerability disclosure`, `#react server components`
+**标签**: `#AI alignment`, `#training methods`, `#Anthropic`, `#model behavior`, `#safety`
 
 ---
 
 <a id="item-7"></a>
-## [Anthropic 教会 Claude 规则背后的'为什么'](https://www.anthropic.com/research/teaching-claude-why) ⭐️ 8.0/10
+## [WebRTC 丢包设计与 LLM 音频需求冲突](https://simonwillison.net/2026/May/9/luke-curley/#atom-everything) ⭐️ 8.0/10
 
-Anthropic 发布了一项研究，探索如何训练 AI 模型（特别是 Claude）理解规则背后的原因，而不仅仅是记住规则，旨在提升对齐能力和安全性。 这种方法可能催生更稳健、更可靠的 AI 系统，使其更好地泛化到新的情境中，因为理解'为什么'的模型更不容易出现奖励黑客行为或灾难性失配。 该研究超越了简单的规则遵从，教导模型理解背后的原理。社区指出，类似的工作已通过'Model Spec Midtraining'应用于 Llama 和 Qwen 等开放权重模型。
+Luke Curley 批评 WebRTC 为了保持低延迟而丢弃音频包，认为这损害了基于 LLM 的音频应用，因为这类应用更重视准确性而非速度。 这凸显了 WebRTC（针对实时对话优化）与 LLM 音频系统（优先确保理解正确）之间的根本性设计不匹配，可能影响基于语音的 AI 界面开发。 Curley 指出，即使在浏览器中重传 WebRTC 音频包也是不可能的，他以 Discord 的经验为例。他认为，多等 200 毫秒换取准确性比收到错误提示更可取。
 
-hackernews · pretext · May 8, 17:59 · [社区讨论](https://news.ycombinator.com/item?id=48066592)
+rss · Simon Willison · May 9, 01:03
 
-**背景**: AI 对齐旨在引导 AI 系统符合人类意图和价值观。一个主要挑战是，明确指定所有期望行为是不可能的，因此模型往往依赖代理目标，这可能导致意外行为。教导模型规则背后的推理可能帮助它们在新情境中更安全地行动。
+**背景**: WebRTC 是一个免费的开源项目，通过简单的 JavaScript API 为网页浏览器提供实时通信能力。它专为低延迟音视频设计，采用丢包和前向纠错等技术，在网络条件不佳时可能降低质量。用于语音 AI 的大型语言模型（LLM）需要准确的音频输入才能生成正确回应，因此丢包会带来问题。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/AI_alignment">AI alignment</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Interpretability_(machine_learning)">Interpretability (machine learning)</a></li>
+<li><a href="https://bloggeek.me/webrtcglossary/packet-loss/">Packet Loss in WebRTC: Causes, Effects & How to Fix It</a></li>
+<li><a href="https://webrtc.github.io/webrtc-org/troubleshooting/">Troubleshooting | WebRTC</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 讨论非常活跃：zozbot234 指出该结果可泛化到开源模型；justonepost2 质疑如果模型造成社会危害，当前的对齐定义是否足够；roenxi 将其与哲学辩论相类比；soletta 认为对齐是一个教学问题；einrealist 指出跨领域的对齐困境。
-
-**标签**: `#AI alignment`, `#AI safety`, `#Anthropic`, `#machine learning`, `#model training`
+**标签**: `#WebRTC`, `#LLM`, `#audio`, `#latency`, `#design`
 
 ---
 
 <a id="item-8"></a>
-## [EMO：通过预训练混合专家模型实现涌现模块化](https://huggingface.co/blog/allenai/emo) ⭐️ 8.0/10
+## [LLM 输出格式：HTML 优于 Markdown 的提示工程新见解](https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything) ⭐️ 8.0/10
 
-艾伦人工智能研究所推出了 EMO，这是一种新颖的混合专家模型预训练方法，能让模块化的专家群体在没有人工定义先验的情况下从数据中自然涌现。 EMO 实现了对专家模型的高效选择性使用，仅需 12.5%的专家参数即可维持接近完整模型的性能，有望降低推理成本并提升模型的可解释性与安全性。 该方法将同一文档内的令牌限制为路由到共享的专家池，从而无需任务标签即可诱导专家专业化。用户可在训练后选择与特定任务相关的小型专家子集。
+Simon Willison 讨论了 Thariq Shihipar 主张在使用 Claude Code 时以 HTML 替代 Markdown 作为输出格式的观点，并提供了具体示例，如代码审查提示，可生成包含图表和交互元素的富 HTML 产物。 该技术通过启用丰富的可视化和交互性，显著增强了 LLM 生成的解释，可能改善代码审查、文档编写和学习复杂概念的开发者工作流。它挑战了 LLM 交互中长期默认使用 Markdown 的习惯。 Simon 指出，在 GPT-4 时代 8,192 token 限制下，Markdown 的 token 效率优势明显，但现代模型中，HTML 更丰富的功能（如内联 SVG 图表和交互小部件）已胜过 token 成本。他演示了要求 GPT-5.5 将 Linux 漏洞利用解释为 HTML 页面的提示。
 
-rss · Hugging Face Blog · May 8, 16:03
+rss · Simon Willison · May 8, 21:00
 
-**背景**: 混合专家模型通过使用多个专门的子网络（专家）并在每个输入上稀疏激活来扩展神经网络。传统方法虽然学习专家分配，但往往导致分散而非模块化的行为。EMO 引入了文档级路由约束，使模块化结构在预训练过程中自然涌现，类似于生物大脑或可解释 AI 系统中的模块化现象。
+**背景**: Claude Code 是 Anthropic 于 2025 年发布的智能编码助手，允许开发者通过终端使用自然语言委派任务。HTML 产物是 Claude 的一项功能，可在专用窗口中生成独立的富内容。Markdown 由于简单且 token 效率高，一直是许多 LLM 交互的默认输出格式，但 HTML 为表达复杂信息提供了更强的表现力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2605.06663v1">Emo: Pretraining Mixture of Experts for Emergent Modularity</a></li>
-<li><a href="https://allenai.org/blog/emo">EMO: Pretraining mixture of experts for emergent modularity</a></li>
-<li><a href="https://github.com/allenai/EMO">GitHub - allenai/EMO</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_(language_model)">Claude (language model) - Wikipedia</a></li>
+<li><a href="https://www.anthropic.com/product/claude-code">Claude Code | Anthropic's agentic coding system</a></li>
+<li><a href="https://code.claude.com/docs/en/overview">Claude Code overview - Claude Code Docs</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#machine learning`, `#mixture of experts`, `#pretraining`, `#modularity`
-
----
-
-<a id="item-9"></a>
-## [12GB 显存实现 80 tok/s 和 128K 上下文：Qwen3.6 35B A3B 与 llama.cpp MTP](https://www.reddit.com/r/LocalLLaMA/comments/1t82zxv/80_toksec_and_128k_context_on_12gb_vram_with/) ⭐️ 8.0/10
-
-一名用户在 RTX 4070 Super（12GB 显存）上，使用 Qwen3.6-35B-A3B 模型配合 llama.cpp 的多 token 预测（MTP）功能，实现了每秒 80 个 token 和 128K 上下文的推理速度。 这表明大型 MoE 模型可以在主流的 12GB GPU 上高效运行，无需昂贵硬件即可实现高质量本地 LLM 推理。 该配置使用了 Q4_K_XL 量化、带未合并 MTP PR 的最新 llama.cpp 构建，以及--no-mmap、--mlock 和--spec-type mtp（带--spec-draft-n-max 2）等特定参数。性能可能因 GPU 而异。
-
-reddit · r/LocalLLaMA · janvitos · May 9, 11:57
-
-**背景**: 多 token 预测（MTP）是一种让 LLM 同时预测多个未来 token 的技术，从而加速推理。Qwen3.6-35B-A3B 是一个稀疏混合专家（MoE）模型，总参数 35B，但每个 token 仅激活 3B 参数，因此效率很高。llama.cpp 是一个流行的开源库，用于在消费级硬件上本地运行 LLM。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.hardware-corner.net/multi-token-prediction-llm-speed/">How Multi-Token Prediction Makes Local LLMs Faster – Without ...</a></li>
-<li><a href="https://insiderllm.com/guides/qwen-3-6-local-ai-guide/">Qwen 3.6 Complete Guide: 27B Dense, 35B-A3B MoE, and Which to ...</a></li>
-<li><a href="https://insiderllm.com/guides/dflash-vs-mtp-rtx-3090-head-to-head/">DFlash vs MTP on RTX 3090: I Tested Both Locally | InsiderLLM</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 用户表示有兴趣在 5070 Ti 和 16GB AMD 显卡等其他 GPU 上测试。一位 RTX 3090 用户报告了 150 tok/s 的速度。有用户询问了 -no-mmap 标志的含义，其他人则分享了不同模型的速度对比。
-
-**标签**: `#local-llm`, `#optimization`, `#llama.cpp`, `#Qwen`, `#MTP`
-
----
-
-<a id="item-10"></a>
-## [Claude Mythos 在 Firefox 加固中证明价值](https://i.redd.it/wu9x6mceu30h1.png) ⭐️ 8.0/10
-
-Mozilla 发布了一篇博文，详细介绍了 AI 模型 Claude Mythos 在 Firefox 加固过程中发现了多个漏洞，为 AI 发现漏洞提供了具体证据。 这表明先进的 AI 模型可以自主发现现实世界中的安全漏洞，可能改变漏洞发现的方式，并引发了关于 Claude Mythos 的能力是否独特或可复制的争论。 发现的漏洞包括 Firefox JavaScript 引擎 SpiderMonkey 中的 TOCTOU（检查时间与使用时间）问题，Mozilla 工程师确认这些发现是真实且令人印象深刻的。
-
-reddit · r/ClaudeAI · EchoOfOppenheimer · May 9, 12:23 · [社区讨论](https://www.reddit.com/r/ClaudeAI/comments/1t83k85/not_a_good_day_for_team_claude_mythos_is_just/)
-
-**背景**: Claude Mythos 是由 Anthropic 开发的前沿 AI 模型，旨在自主发现并链式利用零日漏洞。它被声称能在主要软件中找到关键漏洞。这则新闻提供了来自 Mozilla 工程团队的直接证据，增加了这些说法的可信度。然而，社区中有人认为，通过适当的提示，其他模型如 Claude Opus 也能达到类似效果，暗示炒作可能过度。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.dynatrace.com/news/blog/how-anthropic-claude-mythos-is-reshaping-the-vulnerability-landscape/">How Anthropic Claude Mythos is reshaping the vulnerability ...</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区评论反应不一。一些用户表示怀疑，指出 Mythos 使用的简单提示表明它并不像声称的那样先进。另一些人则提供了 Mozilla 工程师的第一手资料，确认这些漏洞是真实且重要的。一个关键争议点在于 Mythos 的表现是源于其独特能力，还是仅仅因为它被用于解决正确的问题。
-
-**标签**: `#AI security`, `#vulnerability detection`, `#Mozilla Firefox`, `#Claude Mythos`, `#software hardening`
+**标签**: `#AI`, `#prompt engineering`, `#HTML`, `#LLM`, `#coding assistance`
 
 ---
