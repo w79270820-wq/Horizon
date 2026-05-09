@@ -4,12 +4,12 @@
     "provider": "openai",
     "model": "deepseek-v4-flash",
     "base_url": "https://api.deepseek.com",
-    "api_key_env": "OPENAI_API_KEY",
-    "temperature": 0.3,
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.2,
     "max_tokens": 8192,
+    "throttle_sec": 0.3,
     "languages": [
-      "zh",
-      "en"
+      "zh"
     ]
   },
   "sources": {
@@ -17,6 +17,18 @@
       {
         "type": "user_events",
         "username": "karpathy",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "openai",
+        "repo": "openai-python",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "huggingface",
+        "repo": "transformers",
         "enabled": true
       },
       {
@@ -30,78 +42,103 @@
         "owner": "sgl-project",
         "repo": "sglang",
         "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "triton-lang",
-        "repo": "triton",
-        "enabled": true
       }
     ],
     "hackernews": {
       "enabled": true,
       "fetch_top_stories": 30,
-      "min_score": 150
+      "min_score": 100
     },
     "rss": [
+      {
+        "name": "OpenAI News",
+        "url": "https://openai.com/news/rss.xml",
+        "enabled": true,
+        "category": "ai-company"
+      },
+      {
+        "name": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "enabled": true,
+        "category": "open-source-ai"
+      },
+      {
+        "name": "Google AI Blog",
+        "url": "https://blog.google/technology/ai/rss/",
+        "enabled": true,
+        "category": "ai-company"
+      },
+      {
+        "name": "The Verge AI",
+        "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+        "enabled": true,
+        "category": "ai-news"
+      },
       {
         "name": "Simon Willison",
         "url": "https://simonwillison.net/atom/everything/",
         "enabled": true,
-        "category": "ai-tools"
+        "category": "llm-engineering"
       },
       {
-        "name": "GitHub Trending - Daily",
-        "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
+        "name": "GitHub Trending Python",
+        "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/python.xml",
         "enabled": true,
         "category": "github-trending"
       },
       {
-        "name": "LWN.net",
-        "url": "https://lwn.net/headlines/full_text?key=${LWN_KEY}",
+        "name": "GitHub Trending Jupyter Notebook",
+        "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/jupyter-notebook.xml",
         "enabled": true,
-        "category": "linux-kernel"
+        "category": "github-trending"
       }
     ],
     "reddit": {
       "enabled": true,
       "subreddits": [
         {
-          "subreddit": "MachineLearning",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 60
-        },
-        {
           "subreddit": "LocalLLaMA",
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
           "fetch_limit": 15,
-          "min_score": 60
+          "min_score": 50
+        },
+        {
+          "subreddit": "MachineLearning",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 50
+        },
+        {
+          "subreddit": "OpenAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 30
+        },
+        {
+          "subreddit": "ClaudeAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 30
         }
       ],
       "users": [],
-      "fetch_comments": 10
+      "fetch_comments": 5
     },
     "telegram": {
-      "enabled": true,
-      "channels": [
-        {
-          "channel": "zaihuapd",
-          "enabled": true,
-          "fetch_limit": 20
-        }
-      ]
+      "enabled": false,
+      "channels": []
     },
     "twitter": {
-      "enabled": true,
-      "users": [
-        "karpathy",
-        "roifex"
-      ],
+      "enabled": false,
+      "users": [],
       "fetch_limit": 10,
       "fetch_reply_text": false,
       "max_replies_per_tweet": 3,
@@ -110,44 +147,20 @@
     }
   },
   "filtering": {
-    "ai_score_threshold": 8.0,
+    "ai_score_threshold": 7.5,
     "time_window_hours": 24
   },
   "webhook": {
-    "enabled": true,
+    "enabled": false,
     "url_env": "HORIZON_WEBHOOK_URL",
     "delivery": "summary_and_items",
     "overview_position": "last",
-    "platform": "feishu",
-    "layout": "collapsible",
+    "platform": "generic",
+    "layout": "markdown",
     "fallback_layout": "markdown",
     "languages": [
       "zh"
     ],
-    "request_body": {
-      "msg_type": "interactive",
-      "card": {
-        "schema": "2.0",
-        "config": {
-          "wide_screen_mode": true
-        },
-        "header": {
-          "title": {
-            "tag": "plain_text",
-            "content": "#{message_title}"
-          },
-          "template": "blue"
-        },
-        "body": {
-          "elements": [
-            {
-              "tag": "markdown",
-              "content": "#{summary}"
-            }
-          ]
-        }
-      }
-    },
     "headers": ""
   }
 }
