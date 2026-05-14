@@ -5,209 +5,189 @@ date: 2026-05-14
 lang: zh
 ---
 
-> From 41 items, 9 important content pieces were selected
+> From 22 items, 8 important content pieces were selected
 
 ---
 
-1. [TextGen 进化为桌面应用，成为 LM Studio 的开源替代品](#item-1) ⭐️ 9.0/10
-2. [软件的 Emacs 化](#item-2) ⭐️ 8.0/10
-3. [普林斯顿大学要求监考，结束 133 年荣誉守则传统](#item-3) ⭐️ 8.0/10
-4. [将数字栈迁至欧洲引发主权辩论](#item-4) ⭐️ 8.0/10
-5. [谷歌终止免费搜索，Cloudflare 屏蔽 AI 机器人：社区寻找替代方案](#item-5) ⭐️ 8.0/10
-6. [双 RTX 3090 本地实现接近 Sonnet 的编程性能](#item-6) ⭐️ 8.0/10
-7. [通过在 GTX 1080 上使用 MoE 卸载，30B MoE 模型达到 24 token/秒](#item-7) ⭐️ 8.0/10
-8. [Human-level performance via ML was *not* proven impossible with complexity theory (D)](#item-8) ⭐️ 8.0/10
-9. [OpenAI 称 Windows 缺少 Linux 的原生沙箱工具](#item-9) ⭐️ 8.0/10
+1. [Bun 从 Zig 重写为 Rust 并合并](#item-1) ⭐️ 9.0/10
+2. [移除 2024 款 RAV4 混动版调制解调器和 GPS 以保护隐私](#item-2) ⭐️ 8.0/10
+3. [RTX 5090 eGPU 搭配 M4 MacBook Air：游戏与 LLM 加速](#item-3) ⭐️ 8.0/10
+4. [Nginx 严重缓冲区溢出漏洞曝光](#item-4) ⭐️ 8.0/10
+5. [第二个公共 ODoH 中继上线，实现匿名 DNS](#item-5) ⭐️ 8.0/10
+6. [IBM 发布开源多语言嵌入模型，支持 32K 上下文](#item-6) ⭐️ 8.0/10
+7. [LLM 推理中的异步连续批处理](#item-7) ⭐️ 8.0/10
+8. [马斯克对阵奥特曼：OpenAI 的未来受审](#item-8) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [TextGen 进化为桌面应用，成为 LM Studio 的开源替代品](https://www.reddit.com/r/LocalLLaMA/comments/1tbyyee/textgen_is_now_a_native_desktop_app_opensource/) ⭐️ 9.0/10
+## [Bun 从 Zig 重写为 Rust 并合并](https://github.com/oven-sh/bun/pull/30412) ⭐️ 9.0/10
 
-TextGen（原名为 text-generation-webui）现已发布为原生、无需安装的桌面应用，支持 Windows、Linux 和 macOS ，并提供便携式构建版本。 此次更新提供了一个免费、私密且开源的 LM Studio 替代品，促进了本地 LLM 生态系统的竞争，让用户对自己的数据拥有更多控制权。 便携式构建支持 CUDA、Vulkan、纯 CPU、Apple Silicon/Intel 和 ROCm，所有数据存储在独立文件夹中。TextGen 使用 ik_llama.cpp 支持新量化类型，且零出站请求以保护隐私。
+将 Bun JavaScript 运行时从 Zig 重写为 Rust 的合并请求已被合并，新增超过 100 万行 Rust 代码，并删除了 4,024 行 Zig 代码。 这一流行 JavaScript 运行时的重大架构转变引发了关于安全性、复杂性以及 AI 生成代码可靠性的讨论，可能影响其他项目的语言选择。 重写新增了 1,009,257 行 Rust 代码，并在 736 个文件中引入了 10,428 个 unsafe 块，Rust 代码库现已超过 100 万行，接近 Rust 编译器本身的规模。
 
-reddit · r/LocalLLaMA · oobabooga4 · May 13, 13:00
+hackernews · Chaoses · May 14, 08:15 · [社区讨论](https://news.ycombinator.com/item?id=48132488)
 
-**背景**: TextGen（原 text-generation-webui）始于 2022 年 12 月，是一个基于 Gradio 的 Web UI，用于本地运行大型语言模型。它在开源社区中广受欢迎，常被比作 AUTOMATIC1111 的 stable-diffusion-webui。近期转向桌面应用旨在简化安装并改善用户体验。
+**背景**: Bun 是一个 JavaScript 运行时、包管理器和测试运行器，旨在作为 Node.js 的即插即用替代品，最初使用 Zig 编写。Zig 是一种类似于 C 的系统编程语言。此次重写将核心从 Zig 迁移到以内存安全和性能著称的 Rust。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/oobabooga/textgen">GitHub - oobabooga/textgen: Open-source desktop app for local ...</a></li>
-<li><a href="https://easywithai.com/resources/oobabooga/">Oobabooga - AI LLM Web Interface - Easy With AI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bun_(software)">Bun (software) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zig_(programming_language)">Zig (programming language) - Wikipedia</a></li>
+<li><a href="https://bun.sh/">Bun — A fast all-in-one JavaScript runtime</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区情绪极为积极，用户们庆祝有了一个私密、免费的 LM Studio 替代品，并对原始的 oobabooga 项目表示怀念。许多人赞赏这种竞争以及对隐私的关注。
+**社区讨论**: 社区成员对一周的重写时间线表示惊讶，并注意到精心准备的映射指南；其他人则指出大量 unsafe 块的存在，并质疑代码是否得到了充分的审查。一些人猜测有 AI 参与，有评论者将其与 Gastown 项目相比较。
 
-**标签**: `#local-llm`, `#open-source`, `#desktop-app`, `#text-generation`, `#oobabooga`
+**标签**: `#bun`, `#rust`, `#rewrite`, `#javascript`, `#zig`
 
 ---
 
 <a id="item-2"></a>
-## [软件的 Emacs 化](https://sockpuppet.org/blog/2026/05/12/emacsification/) ⭐️ 8.0/10
+## [移除 2024 款 RAV4 混动版调制解调器和 GPS 以保护隐私](https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/) ⭐️ 8.0/10
 
-一篇文章认为，大型语言模型（LLM）让构建个人软件变得如同配置 Emacs 一样简单，开启了一个个性化、用户自主创建应用程序的新时代。 这一转变可能会使软件开发民主化，让个人能够根据自身需求定制工具，而非依赖预包装软件，从而可能重塑整个软件生态系统。 作者列举了播客应用和笔记工具等例子，在这些领域，借助 LLM 辅助开发可以产生'超越替代品级别'的结果，即能与现有的专业软件竞争。
+一篇详细指南说明了如何从 2024 款 RAV4 混动版中物理移除调制解调器和 GPS 以阻止遥测数据收集，但警告蓝牙连接仍可通过已配对手机的网络传输数据。 该指南凸显了现代车辆中日益增长的隐私问题以及制造商缺乏支持，赋予车主硬件层面的控制权。它还强调了蓝牙网络共享绕过物理移除的风险，影响到任何担心车辆数据与保险公司等共享的人。 移除远程信息处理控制单元（TCU）会禁用车辆的蜂窝数据传输，但如果通过蓝牙连接手机，车辆仍可利用手机网络发送同样的遥测数据。作者建议使用有线 USB 连接 CarPlay 以避免此问题，因为 USB 连接不允许共享网络。
 
-hackernews · rdslw · May 13, 07:06 · [社区讨论](https://news.ycombinator.com/item?id=48118727)
+hackernews · arkadiyt · May 14, 17:08 · [社区讨论](https://news.ycombinator.com/item?id=48138136)
 
-**背景**: Emacs 是一个高度可定制的文本编辑器，用户通过编写 Lisp 代码来配置几乎每个方面。'Emacs 化'最初描述了一种愿景，即所有程序都能嵌入到 Guile 扩展语言中，但在这里它比喻性地代表了让所有软件像 Emacs 一样可定制。像 Claude 这样的 LLM 如今使非专业人士能够通过自然语言描述需求来创建定制软件，大大降低了入门门槛。
+**背景**: 现代汽车配备了远程信息处理控制单元（TCU），用于收集位置、速度、诊断等数据，并通过蜂窝网络传输给制造商。蓝牙连接可自动与车辆共享网络访问权限，使得即使在移除 TCU 后仍能继续发送遥测数据。丰田因被报道与保险公司共享数据而面临批评，且提供的退出选项有限。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="http://www.gnu.org/software/guile/manual/html_node/Status.html">Status (Guile Reference Manual)</a></li>
-<li><a href="https://wingolog.org/archives/2009/01/07/a-brief-history-of-guile">a brief history of guile — wingolog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Telematic_control_unit">Telematic control unit - Wikipedia</a></li>
+<li><a href="https://security-guidance.service.justice.gov.uk/bluetooth/">Bluetooth - MoJ Security Guidance</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: HN 用户 tptacek 和 dang 强烈赞同这一观点，tptacek 列出了播客应用、RSS 阅读器等用户现在可以自行构建的软件类别。另一位用户 shaokind 分享了自己用 LLM 构建个人软件的经验，但提醒说 Emacs 配置在不同平台上可能很脆弱。SoftTalker 指出这符合 1960 年代个人计算的原始愿景——每个人都编写自己的程序。
+**社区讨论**: 社区评论表达了对蓝牙漏洞的担忧，并指出福特 Maverick 有更简单的保险丝移除方案。一些用户分享了对丰田否认 GPS 问题的沮丧，并推测与保险公司的数据共享。总体情绪支持该指南，但强调了蓝牙风险。
 
-**标签**: `#AI-assisted development`, `#personal software`, `#LLMs`, `#software engineering`
+**标签**: `#automotive`, `#privacy`, `#telemetry`, `#hardware modification`
 
 ---
 
 <a id="item-3"></a>
-## [普林斯顿大学要求监考，结束 133 年荣誉守则传统](https://www.dailyprincetonian.com/article/2026/05/princeton-news-adpol-proctoring-in-person-examinations-passed-faculty-133-years-precedent) ⭐️ 8.0/10
+## [RTX 5090 eGPU 搭配 M4 MacBook Air：游戏与 LLM 加速](https://scottjg.com/posts/2026-05-05-egpu-mac-gaming/) ⭐️ 8.0/10
 
-普林斯顿大学通过了一项强制规定，要求所有校内考试必须监考，推翻了 133 年来允许无监考考试的荣誉守则传统。 这所知名学府的政策转变标志着在学术诚信方面的信任度严重下降，而人工智能辅助作弊工具的兴起是直接原因。 该决定基于一项调查，显示近 30%的学生承认作弊，尽管学生抗议，教职员工仍投票决定终止荣誉制度。
+一篇技术文章展示了如何通过 Thunderbolt eGPU 将 NVIDIA RTX 5090 连接到 M4 MacBook Air，从而实现游戏（例如 Doom）运行，并大幅提升 LLM 提示处理速度，远超 Mac 原生 GPU 的表现。 这一发现为苹果硅芯片有限的 GPU 性能提供了可行的解决方案，尤其是在提示处理是已知瓶颈的 LLM 推理场景中，并扩展了缺乏原生高端 GPU 支持的 Mac 上的游戏可能性。 该设置需要在 Linux 虚拟机中通过 Thunderbolt 实现 GPU 直通，受限于 1.5 GB 内存窗口，且缺少苹果官方驱动支持，因此是一项复杂但有效的黑客方案。
 
-hackernews · bookofjoe · May 13, 20:12 · [社区讨论](https://news.ycombinator.com/item?id=48126848)
+hackernews · allenleee · May 14, 15:47 · [社区讨论](https://news.ycombinator.com/item?id=48137145)
 
-**背景**: 普林斯顿的荣誉守则始于 1893 年，依靠学生的诚信不作弊并举报违规者。然而，像 ChatGPT 这样的 AI 模型广泛可用，使作弊更容易且更难检测，从而促使了变革。
+**背景**: eGPU（外部 GPU）通过 Thunderbolt 连接，为笔记本电脑提供桌面级图形性能，但苹果硅芯片 Mac 官方不支持 eGPU。LLM 提示处理（预填充）计算密集，在 Mac 上常因统一内存带宽限制而缓慢，因此 RTX 5090 的专用显存是显著优势。
 
-**社区讨论**: 评论者普遍支持这一举措，认为现代作弊技术使得监考成为必要。一些人指出荣誉守则的遵守程度本来就很低，这一变化反映了社会信任的普遍下降。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://eshop.macsales.com/blog/61716-egpu-101-a-primer-on-external-graphics-processing-units/">eGPU 101: A Primer on External Graphics Processing Units</a></li>
+<li><a href="https://haystack.deepset.ai/blog/beginners-guide-to-llm-prompting">The Beginner's Guide to LLM Prompting | Haystack</a></li>
 
-**标签**: `#education`, `#AI`, `#academic integrity`, `#ethics`, `#policy`
+</ul>
+</details>
+
+**社区讨论**: 社区评论非常积极，用户如 matthewfcarlson 指出长期以来的 VM GPU 直通需求，Aurornis 强调 LLM 的实际改进，geerlingguy 则赞赏这种技术方法，尽管苹果缺乏支持。
+
+**标签**: `#eGPU`, `#Mac gaming`, `#RTX 5090`, `#M4 MacBook Air`, `#LLM inference`
 
 ---
 
 <a id="item-4"></a>
-## [将数字栈迁至欧洲引发主权辩论](https://monokai.com/articles/how-i-moved-my-digital-stack-to-europe/) ⭐️ 8.0/10
+## [Nginx 严重缓冲区溢出漏洞曝光](https://github.com/DepthFirstDisclosures/Nginx-Rift) ⭐️ 8.0/10
 
-一位用户详细介绍了将其数字基础设施从美国迁移到欧洲提供商的经历，理由是担心美国的不可预测性和隐私问题。 这一个人经历突显了人们对数字主权日益增长的兴趣，以及脱离美国科技巨头的实际挑战，可能影响其他开发者和企业。 迁移过程包括将 Cloudflare 等服务替换为 Bunny CDN，并构建了一个 Terraform 配置，以实现欧洲内部跨提供商的高可用性。
+Nginx 中被披露了一个严重的缓冲区溢出漏洞，概念验证利用针对特定配置，涉及 rewrite 和 set 指令。 鉴于 Nginx 作为 Web 服务器和反向代理的广泛使用，该漏洞对受影响系统构成重大威胁，尤其对于那些关闭 ASLR 且存在可利用配置的系统。 该利用需要 rewrite 指令的替换字符串中包含问号，以及后续的 set 指令引用正则捕获组，且提供的概念验证假定 ASLR 已禁用。
 
-hackernews · monokai_nl · May 13, 11:42 · [社区讨论](https://news.ycombinator.com/item?id=48120629)
+hackernews · hetsaraiya · May 14, 17:17 · [社区讨论](https://news.ycombinator.com/item?id=48138268)
 
-**背景**: “数字栈”指的是用于运行数字业务的工具、平台和软件的集合。“技术主权”是一个政治概念，强调在司法管辖区内对数据和基础设施的控制。欧盟一直在推行更严格的数字法规，如 GDPR。
+**背景**: ASLR（地址空间布局随机化）是一种内存保护技术，通过随机化关键进程区域的内存地址来增加利用难度。缓冲区溢出攻击试图覆盖内存以执行任意代码，而 ASLR 是一种关键缓解措施。然而，如果 ASLR 被禁用或被绕过，该利用将变得危险得多。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.launchnotes.com/glossary/digital-technology-stack-in-product-management-and-operations">Digital Technology Stack: Definition, Examples, and ...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Technological_sovereignty">Technological sovereignty - Wikipedia</a></li>
-<li><a href="https://www.weforum.org/stories/2026/01/race-for-tech-sovereignty-is-a-balancing-act/">Here's why the race for tech sovereignty is a balancing act | World Economic Forum</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Address_space_layout_randomization">Address space layout randomization - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者注意到欧盟政府官员对在欧洲内部托管的审查越来越严格，一些人分享了自己的迁移经验。然而，也有人警告说，欧洲并非完美的避风港，可能会施加 VPN 禁令等限制，建议多元化而非搬迁。
+**社区讨论**: 社区讨论指出，虽然已发布的利用需要禁用 ASLR，但研究人员声称存在可靠的 ASLR 绕过方式。一些评论者强调不应仅依赖 ASLR 作为防御手段，并指出缓解措施包括在 rewrite 指令中使用命名捕获。
 
-**标签**: `#Digital sovereignty`, `#Infrastructure`, `#European tech`, `#Cloud migration`
+**标签**: `#security`, `#nginx`, `#exploit`, `#vulnerability`, `#buffer-overflow`
 
 ---
 
 <a id="item-5"></a>
-## [谷歌终止免费搜索，Cloudflare 屏蔽 AI 机器人：社区寻找替代方案](https://www.reddit.com/r/LocalLLaMA/comments/1tcaboi/websearch_is_coming_to_a_screeching_performance/) ⭐️ 8.0/10
+## [第二个公共 ODoH 中继上线，实现匿名 DNS](https://numa.rs/blog/posts/odoh-anonymous-dns-without-an-account.html) ⭐️ 8.0/10
 
-谷歌已停止其可编程搜索引擎的免费全网搜索，免费层级限制为 50 个域名，迁移截止日期为 2027 年 1 月 1 日。与此同时，Cloudflare 已为其所有客户默认开启针对 AI 爬虫的机器人挑战，并新增与 GoDaddy 的合作。 这些变化严重限制了用于 AI 训练和检索增强生成的网页抓取，可能降低依赖实时网络数据的本地大语言模型的效能。社区现在必须探索去中心化、自托管或替代搜索解决方案以维持访问。 谷歌的免费层级现在仅允许在 50 个域名内进行站点特定搜索，且未公布高级搜索的公开定价。Cloudflare 的默认机器人挑战现已适用于所有 AI 机器人，与 GoDaddy 的合作将这一保护扩展到数百万个域名。
+作者构建并部署了第二个公共 ODoH 中继，同时提供了客户端，无需账户即可实现匿名 DNS 解析。该中继已集成到 Numa v0.14 工具中。 此次部署填补了 ODoH 生态系统的关键空白，此前该领域仅有一个知名的公共中继。这为注重隐私的用户提供了可行替代方案，无需注册 NextDNS 或 Cloudflare Families 等服务即可实现匿名 DNS。 ODoH 中继和客户端以单个 MIT 许可证的 Rust 二进制文件（Numa v0.14）形式提供。该协议通过使用独立的中继运营商和公钥加密（HPKE），将客户端身份与查询内容分离。
 
-reddit · r/LocalLLaMA · NetTechMan · May 13, 19:35
+hackernews · rdme · May 14, 10:44 · [社区讨论](https://news.ycombinator.com/item?id=48133561)
 
-**背景**: 网页抓取对于训练大型语言模型以及为 AI 系统提供实时搜索能力至关重要。谷歌的可编程搜索引擎曾是开发者集成网页搜索的流行免费 API，而 Cloudflare 的机器人管理则保护网站免受不希望的自动化流量影响。近期的政策变化旨在通过搜索流量变现并保护内容免遭 AI 利用。
+**背景**: ODoH（Oblivious DNS over HTTPS）是一种 RFC 9230 协议，通过代理将客户端的 IP 地址与 DNS 查询分离，从而增强 DNS 隐私。传统的加密 DNS 服务如 NextDNS 或 Apple 的 iCloud Private Relay 需要用户账户，这削弱了匿名性。第一个公共 ODoH 中继由 Frank Denis 在 Fastly Compute 上运营，是 dnscrypt-proxy 的默认配置。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://winbuzzer.com/2026/01/23/google-ends-free-web-search-programmable-search-engine-xcxwbn/">Google Ends Free Web Search for Programmable Search Engine</a></li>
-<li><a href="https://developers.cloudflare.com/bots/">Overview · Cloudflare bot solutions docs</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Distributed_search_engine">Distributed search engine - Wikipedia</a></li>
+<li><a href="https://numa.rs/blog/posts/odoh-anonymous-dns-without-an-account.html">Anonymous DNS without an account: shipping ODoH client + relay in one Rust binary — Numa</a></li>
+<li><a href="https://datatracker.ietf.org/meeting/109/materials/slides-109-maprg-oblivious-dns-over-https-odoh-measurements-and-feasibility-sudheesh-singanamalla-00">Oblivious DNS over HTTPS (ODoH) A Practical Privacy Enhancement to DNS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dnscrypt-proxy">Dnscrypt-proxy</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员提到了替代方案，如 P2P 去中心化搜索引擎 YaCy、自托管元搜索引擎 SearXNG 以及免费提供的 Common Crawl 数据集。一些人建议在 P2P 网络上镜像网页或实现微支付以补偿内容创作者，许多人表示愿意付费以消除广告行业。
+**社区讨论**: 评论者提出了对信任模型的担忧（‘层层嵌套’），并质疑在 ECH 采纳率低的情况下 ODoH 的价值。不过，也有人欣赏这一实际部署，询问运营挑战以及与 Tailscale 等工具的集成。
 
-**标签**: `#AI`, `#web scraping`, `#search`, `#decentralized`, `#Cloudflare`
+**标签**: `#ODoH`, `#DNS`, `#privacy`, `#networking`, `#infrastructure`
 
 ---
 
 <a id="item-6"></a>
-## [双 RTX 3090 本地实现接近 Sonnet 的编程性能](https://www.reddit.com/r/LocalLLaMA/comments/1tcf2dt/we_really_all_are_going_to_make_it_arent_we/) ⭐️ 8.0/10
+## [IBM 发布开源多语言嵌入模型，支持 32K 上下文](https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2) ⭐️ 8.0/10
 
-一位用户报告使用开源工具 club-3090 在双 RTX 3090 配置上实现了每秒 113 个 token 的生成速度，并达到接近 Sonnet 级别的编程工作流，此前修复了 SSE 会话中断和工具调用问题。 这展示了消费级双 RTX 3090 硬件现在能够运行强大的本地 AI 模型，胜任严肃的编程辅助任务，在速度和隐私方面与云服务匹敌，标志着向可访问、私密 AI 的重大转变。 该配置在 48 GB 显存上运行 Qwen 3.6 27B 模型，支持 262K 上下文，未使用 NVLink 即达到每秒 4000 个 prompt token 和 113 个生成 token 的速度。用户从 WSL2 切换到原生 Ubuntu 以获得最佳性能。
+IBM 发布了 Granite Embedding Multilingual R2，这是一个采用 Apache 2.0 许可证的开源多语言嵌入模型，具有 32K 上下文窗口，并声称在参数少于 1 亿的模型中拥有最佳的检索质量。 这一发布提供了一个开放、高质量的嵌入模型，能够处理长文档和多语言，这对于全球背景下的检索增强生成（RAG）和语义搜索应用至关重要。 该模型设计为参数少于 1 亿，确保推理速度快且资源占用低，而 32K 上下文窗口允许它一次性嵌入长段落。它以宽松的 Apache 2.0 许可证发布。
 
-reddit · r/LocalLLaMA · RedShiftedTime · May 13, 22:25
+rss · Hugging Face Blog · May 14, 18:55
 
-**背景**: 得益于软件优化（如 vLLM、llama.cpp）和更好的小模型，消费级硬件上的本地 LLM 推理性能迅速提升。club-3090 工具为双 RTX 3090 配置封装了 Docker Compose 配方和基准测试，提供兼容 OpenAI 的 API。数月前此类模型的 token 速度还远低于当前水平。
+**背景**: 嵌入模型将文本转换为捕捉语义含义的数值向量，从而支持语义搜索和检索增强生成（RAG）等任务。上下文窗口决定了单次前向传播中可以嵌入的最大文本长度；更大的上下文减少了分块的需要，并提高了长文档的检索准确性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/noonghunna/club-3090">GitHub - noonghunna/club-3090: Community recipes for serving ...</a></li>
-<li><a href="https://toolhunter.cc/tools/club-3090">club-3090: Best Local LLM Serving for RTX 3090 Owners in 2026</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Embedding_(machine_learning)">Embedding (machine learning) - Wikipedia</a></li>
+<li><a href="https://www.langchain.com/blog/voyage-embeddings-in-langchain-and-chat-langchain">Embeddings Drive the Quality of RAG: Voyage AI in Chat LangChain</a></li>
+<li><a href="https://insiderllm.com/guides/embedding-models-rag/">Embedding Models for RAG: Which to Run Locally | InsiderLLM</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区反响热烈，指出本地 AI 已从勉强能总结文本发展到运行有用的编程工作流。评论者强调软件和运行时优化的快速进步，并希望类似能力能下放到双 RTX 3060 等更低端硬件。
-
-**标签**: `#local-llm`, `#hardware`, `#3090`, `#AI-inference`, `#open-source`
+**标签**: `#embeddings`, `#multilingual`, `#NLP`, `#open-source`, `#retrieval`
 
 ---
 
 <a id="item-7"></a>
-## [通过在 GTX 1080 上使用 MoE 卸载，30B MoE 模型达到 24 token/秒](https://www.reddit.com/r/LocalLLaMA/comments/1tcc7h5/24_toks_from_30b_moe_models_on_an_old_gtx_1080_8/) ⭐️ 8.0/10
+## [LLM 推理中的异步连续批处理](https://huggingface.co/blog/continuous_async) ⭐️ 8.0/10
 
-一位用户展示了在 200 美元的二手系统（GTX 1080 8GB、i7-6700、32GB RAM）上，使用 llama.cpp 的 MoE 卸载和 TurboQuant/RotorQuant KV 缓存量化，以 128k 上下文运行 Qwen 3.6 35B-A3B 和 Gemma 4 26B-A4B MoE 模型，速度达到 24 token/秒。 这一成就大幅降低了运行大型 MoE 模型的硬件门槛，使得在廉价老旧 GPU 上进行先进 LLM 推理成为可能。同时，它也突显了结合 MoE 卸载与 KV 缓存量化来克服 VRAM 限制的有效性。 关键技巧是 MoE 卸载，它将冷专家权重放在系统 RAM 中并通过 PCIe 流式传输，同时将热层和 KV 缓存保留在 GPU 上；系统受限于 PCIe 带宽。对于 Gemma 4 的 MTP 推测解码，用户发现使用--override-tensor-draft 将 token 嵌入表强制放到 GPU 上可获得 22%的加速，而非默认的 5%。
+Hugging Face 提出了一种方法，在 LLM 推理中为连续批处理增加异步性，允许在批次运行中间注入新请求，从而提高吞吐量和 GPU 利用率。 这一进步显著提高了生产环境中 LLM 服务系统的效率，减少了 GPU 空闲时间，并在不牺牲延迟的情况下实现更高的请求吞吐量。 异步连续批处理方法动态管理队列并在每一步调度请求，与从头到尾处理固定批次的同步方法形成对比。
 
-reddit · r/LocalLLaMA · mdda · May 13, 20:41
+rss · Hugging Face Blog · May 14, 00:00
 
-**背景**: MoE（混合专家）模型包含许多稀疏激活的专门子网络（专家），从而减少计算量但增加内存需求。llama.cpp 的 MoE 卸载动态地将非活跃的专家权重移至 CPU RAM，使更大模型能够放入有限的 GPU VRAM 中。TurboQuant 和 RotorQuant 是 KV 缓存的先进量化技术，使 128k 上下文能在 8GB VRAM 内运行。MTP（多 token 预测）是一种推测解码方法，轻量级起草模型并行预测多个 token，然后由主模型验证。
+**背景**: 连续批处理是一种通过在每个生成步骤重新排序和分组请求来最大化 GPU 利用率的技术，而不是等待整个批次完成。异步处理允许在推理进行中接受新请求，填补空闲容量并提高整体吞吐量。vLLM 等系统已经实现了类似的异步引擎来支持连续批处理。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://gist.github.com/DocShotgun/a02a4c0c0a57e43ff4f038b46ca66ae0">Guide to optimizing inference performance of large MoE models ...</a></li>
-<li><a href="https://www.scrya.com/rotorquant/">RotorQuant — Clifford Algebra Vector Quantization | Scrya</a></li>
-<li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/">Multi-token-prediction in Gemma 4 - The Keyword</a></li>
+<li><a href="https://huggingface.co/docs/transformers/main/continuous_batching">Continuous batching · Hugging Face</a></li>
+<li><a href="https://vllm.ai/blog/2025-09-05-anatomy-of-vllm">Inside vLLM: Anatomy of a High-Throughput LLM Inference System | vLLM Blog</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员指出，尽管预留了 128k 上下文，但测试使用了小上下文（低于 2000 token），实际全上下文使用会导致性能大幅下降。其他人称赞了其性价比（200 美元）以及 MTP 嵌入放置的巧妙变通方案，同时质疑 MTP 覆盖修复是否会合并到上游。
-
-**标签**: `#MoE`, `#inference optimization`, `#LLM deployment`, `#hardware`, `#llama.cpp`
+**标签**: `#LLM inference`, `#continuous batching`, `#asynchronous processing`, `#performance optimization`, `#AI systems`
 
 ---
 
 <a id="item-8"></a>
-## [Human-level performance via ML was *not* proven impossible with complexity theory (D)](https://www.reddit.com/r/MachineLearning/comments/1tc1xr3/humanlevel_performance_via_ml_was_not_proven/) ⭐️ 8.0/10
+## [马斯克对阵奥特曼：OpenAI 的未来受审](https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit) ⭐️ 8.0/10
 
-A published paper claiming to prove AGI via ML impossible is shown to have an irreparably broken proof due to undefined terms and flawed assumptions.
+埃隆·马斯克和山姆·奥特曼在一场高风险的审判中对峙，马斯克指控 OpenAI 为了利润而放弃了其非营利使命。 这场审判可能重塑 AI 治理，以及 AI 行业中利润动机与公共福利之间的平衡，对 OpenAI 的使命和整个生态系统产生影响。 马斯克于 2024 年提起诉讼，指控 OpenAI 偏离了其造福人类的创始使命，转而专注于提升利润。
 
-reddit · r/MachineLearning · mike_uoftdcs · May 13, 14:50
+rss · The Verge AI · May 14, 15:46
 
-**标签**: `#AGI`, `#machine learning`, `#complexity theory`, `#paper rebuttal`, `#theoretical AI`
+**背景**: OpenAI 最初于 2015 年作为非营利组织成立，其使命是开发造福全人类的人工智能。2019 年，它转向了上限利润模式，马斯克声称这违反了最初的协议。这场法律斗争的核心是 OpenAI 是否违背了其创始原则。
 
----
-
-<a id="item-9"></a>
-## [OpenAI 称 Windows 缺少 Linux 的原生沙箱工具](https://nerds.xyz/2026/05/openai-linux-windows-codex-sandbox/) ⭐️ 8.0/10
-
-OpenAI 发布技术分析，称在 Windows 上为 Codex 构建自定义沙箱需要复杂的系统，包括受限令牌、自定义用户、防火墙规则和辅助二进制文件，而 Linux 已有 seccomp 和 bubblewrap 等现成工具。 这突显了 AI 代理对操作系统级隔离的需求日益增长，并暴露了 Windows 在隔离 API 上相比 Linux 的劣势，可能影响未来 AI 部署的平台选择。 OpenAI 特别提到了 Linux 的 seccomp（系统调用过滤）和 bubblewrap（无特权沙箱）等工具，使 Linux 上的沙箱更加简单，而 Windows 则迫使工程师创建更复杂的系统。
-
-reddit · r/OpenAI · OkReport5065 · May 13, 23:23 · [社区讨论](https://www.reddit.com/r/OpenAI/comments/1tcgihr/openai_says_windows_lacked_the_sandboxing_tools/)
-
-**背景**: Seccomp 是 Linux 内核的安全机制，允许进程单向进入安全状态，仅能执行有限的系统调用。Bubblewrap 是轻量级的无特权沙箱工具，用于 Flatpak 等容器项目。相比之下，Windows 使用受限令牌创建现有令牌的受限版本，但整体沙箱过程需要更多手动配置。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Seccomp">seccomp - Wikipedia</a></li>
-<li><a href="https://github.com/containers/bubblewrap">GitHub - containers/bubblewrap: Low-level unprivileged sandboxing tool used by Flatpak and similar projects · GitHub</a></li>
-<li><a href="https://learn.microsoft.com/en-us/windows/win32/secauthz/restricted-tokens">Restricted Tokens - Win32 apps | Microsoft Learn</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 评论者普遍认为 Windows 沙箱混乱且不如 Linux。有人对此成为新闻表示惊讶，也有人指出 Linux 的可组合安全工具哲学是关键优势。一位用户表示，要不是为了游戏，早就抛弃 Windows 了。
-
-**标签**: `#Windows`, `#Linux`, `#sandboxing`, `#security`, `#AI agents`
+**标签**: `#OpenAI`, `#Elon Musk`, `#Sam Altman`, `#AI governance`, `#lawsuit`
 
 ---
