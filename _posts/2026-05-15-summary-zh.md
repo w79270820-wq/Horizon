@@ -5,357 +5,283 @@ date: 2026-05-15
 lang: zh
 ---
 
-> From 50 items, 15 important content pieces were selected
+> From 32 items, 12 important content pieces were selected
 
 ---
 
-1. [Mullvad VPN 出口 IP 可实现持久追踪](#item-1) ⭐️ 8.0/10
-2. [从 2024 RAV4 混合动力车上移除通讯模块和 GPS](#item-2) ⭐️ 8.0/10
-3. [苹果 M5 首次公开 macOS 内核利用漏洞曝光](#item-3) ⭐️ 8.0/10
-4. [M4 MacBook Air 上运行 RTX 5090 eGPU：游戏与 AI 突破](#item-4) ⭐️ 8.0/10
-5. [新 Nginx RCE 漏洞需特定配置](#item-5) ⭐️ 8.0/10
-6. [arXiv 对虚构参考文献实施一年禁令](#item-6) ⭐️ 8.0/10
-7. [Bun 从 Zig 重写为 Rust 的合并完成](#item-7) ⭐️ 8.0/10
-8. [GGUF 格式深度解析：优势与缺失功能](#item-8) ⭐️ 8.0/10
-9. [安大略省审计：医疗 AI 笔记工具频繁出错](#item-9) ⭐️ 8.0/10
-10. [MIT 校长谈资金与人才管道挑战](#item-10) ⭐️ 8.0/10
-11. [IBM 发布 32K 上下文的多语言嵌入模型](#item-11) ⭐️ 8.0/10
-12. [埃隆·马斯克与山姆·奥特曼就 OpenAI 未来对簿公堂](#item-12) ⭐️ 8.0/10
-13. [TurboQuant 研究：FP8 KV 缓存量化整体最佳](#item-13) ⭐️ 8.0/10
-14. [RTX 5000 PRO (48GB) 在本地 LLM 推理中表现惊艳](#item-14) ⭐️ 8.0/10
-15. [Anthropic 弃用 Opus 4.6 和 Sonnet 4.6 手动扩展思考](#item-15) ⭐️ 8.0/10
+1. [Project Zero 披露 Pixel 10 零点击漏洞利用链](#item-1) ⭐️ 9.0/10
+2. [Mullvad 退出 IP 可使用户被指纹识别](#item-2) ⭐️ 9.0/10
+3. [vllm v0.21.0：KV 卸载、推测解码、Blackwell 后端](#item-3) ⭐️ 8.0/10
+4. [讽刺初创公司提议通过服务互换伪造收入](#item-4) ⭐️ 8.0/10
+5. [Antirez 发布 DwarfStar4 大模型运行引擎，专为 DeepSeek 4 打造](#item-5) ⭐️ 8.0/10
+6. [Turso 因 AI 生成的虚假报告关闭漏洞赏金计划](#item-6) ⭐️ 8.0/10
+7. [Codex 现可于 ChatGPT 移动应用中使用](#item-7) ⭐️ 8.0/10
+8. [Nginx 存在 18 年的严重远程代码执行漏洞已修复](#item-8) ⭐️ 8.0/10
+9. [IBM Granite 发布多语言嵌入模型 R2，支持 32K 上下文](#item-9) ⭐️ 8.0/10
+10. [OpenAI 计划让 ChatGPT 通过 Plaid 访问你的银行账户](#item-10) ⭐️ 8.0/10
+11. [AI 研究论文面临引用膨胀问题](#item-11) ⭐️ 8.0/10
+12. [微软取消员工 Claude Code 许可证](#item-12) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Mullvad VPN 出口 IP 可实现持久追踪](https://tmctmt.com/posts/mullvad-exit-ips-as-a-fingerprinting-vector/) ⭐️ 8.0/10
+## [Project Zero 披露 Pixel 10 零点击漏洞利用链](https://projectzero.google/2026/05/pixel-10-exploit.html) ⭐️ 9.0/10
 
-研究人员发现，Mullvad VPN 根据 WireGuard 密钥确定性地分配出口 IP，这些密钥每 1 到 30 天轮换一次，使用第三方客户端则永不轮换，从而允许网站跨会话追踪用户。 这削弱了热门 VPN 服务的隐私承诺，因为仅凭出口 IP 即可对用户进行持久指纹识别，与匿名期望相悖。 出口 IP 由 WireGuard 公钥派生而来，该密钥仅在官方应用中每 1 到 30 天轮换一次，第三方客户端则永不轮换。修复方法很简单：添加伪随机种子，使每次连接的出口 IP 随机化。
+Google 的 Project Zero 披露了一个针对 Pixel 10 的零点击漏洞利用链，该链利用 Android 中 AI 驱动的消息处理功能，可在无需用户交互的情况下远程控制内核。 这一发现凸显了移动设备上 AI 功能带来的攻击面扩大——这些功能会在用户打开消息前解码媒体文件，从而实现远程无交互利用，威胁到所有拥有类似 AI 功能的 Android 用户。 该漏洞利用链仅需两个软件缺陷即可在零点击上下文中获取内核权限，且该漏洞在 90 天内被修复，这对于 Android 驱动漏洞来说非常迅速。
 
-hackernews · RGBCube · May 15, 02:35 · [社区讨论](https://news.ycombinator.com/item?id=48143880)
+hackernews · happyhardcore · May 15, 13:39 · [社区讨论](https://news.ycombinator.com/item?id=48148460)
 
-**背景**: VPN 通常从 IP 池中为用户分配共享出口 IP 以匿名化流量。Mullvad 的确定性分配将每个用户与一个特定出口 IP 绑定，持续到 WireGuard 密钥的生命周期结束，从而实现长期追踪。相比之下，Tor 网络每个电路都会轮换出口节点，提供更好的匿名性。
+**背景**: 零点击漏洞利用允许攻击者在无需用户任何操作（如点击链接）的情况下攻陷设备。Android 中 AI 驱动的消息处理会在用户打开消息前解码媒体（例如短信中的图片），从而扩大了攻击面。Project Zero 是谷歌内部的网络安全团队，负责发现并向厂商披露零日漏洞。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/Scanner771/mullvad-exit-check">GitHub - Scanner771/mullvad-exit-check: Scan Mullvad VPN ...</a></li>
-<li><a href="https://tailscale.com/docs/features/exit-nodes/mullvad-exit-nodes">Mullvad exit nodes - Tailscale Docs</a></li>
-<li><a href="https://mullvad.net/en/help/using-mullvad-vpn-app">Using the Mullvad VPN app Mullvad Exit Reputation — 87% usable (467 clean/538) Yet Another Privacy Setup: Pi-hole + Tailscale + Mullvad Exit ... Mullvad exit IPs as a fingerprinting vector | tmctmt Mullvad VPN - Server IPs, Countries, and Cities - Netify</a></li>
+<li><a href="https://projectzero.google/2026/01/pixel-0-click-part-3.html">A 0 - click exploit chain for the Pixel 9 Part 3: Where do... - Project Zero</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论反应不一：有人淡化问题，认为 VPN 本就不该用于对抗网站匿名化，而有人强调确定性出口 IP 违背了隐私 VPN 的初衷。普遍建议是 Mullvad 应添加轮换随机化。
+**社区讨论**: 社区评论对 AI 功能扩大攻击面表示担忧，一些人赞扬谷歌的快速修复时间，但担心其他 Android 厂商的响应速度。还有人讨论了已公开漏洞利用率的上升趋势，以及专业知识在发现特定漏洞中的作用。
 
-**标签**: `#privacy`, `#VPN`, `#fingerprinting`, `#security`
+**标签**: `#security`, `#android`, `#exploit`, `#vulnerability`, `#Pixel`
 
 ---
 
 <a id="item-2"></a>
-## [从 2024 RAV4 混合动力车上移除通讯模块和 GPS](https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/) ⭐️ 8.0/10
+## [Mullvad 退出 IP 可使用户被指纹识别](https://tmctmt.com/posts/mullvad-exit-ips-as-a-fingerprinting-vector/) ⭐️ 9.0/10
 
-一份详细指南说明了如何从 2024 款丰田 RAV4 混合动力车上物理移除数据通信模块（DCM）和 GPS 天线以阻止遥测数据传输，同时指出蓝牙连接仍可通过手机网络泄露数据。 这凸显了人们对汽车数据隐私日益增长的担忧，并为注重隐私的车主提供了物理禁用跟踪的实用方法，尽管它警告蓝牙和手机集成仍会导致残留数据泄露。 移除 DCM 后，通过蓝牙连接手机仍会允许车辆利用手机网络向丰田发送遥测数据，但使用有线 USB 连接据说可以阻止这种情况。指南还指出，CarPlay 和 Android Auto 本身也会捕获车辆遥测数据。
+一篇博客文章揭示，Mullvad VPN 的退出 IP 地址可以以高概率对用户进行指纹识别，即使用户切换服务器也无法避免。问题源于 Mullvad 从 IP 池中分配公共退出 IP 的方式，为每个用户创建了稳定的模式。 这一漏洞削弱了备受信赖的 VPN 服务的隐私保障，可能使网站或对手能够跨会话追踪用户。它强调，即使是声称“不记录日志”的 VPN，也可能通过超出其控制的网络层行为泄露可识别信息。 指纹识别通过比较退出 IP 地址的重叠浮动范围实现；多次连接中范围重叠可产生超过 99%的同一用户概率。Mullvad 联合 CEO 已确认知晓此事，正在对意外行为进行补丁测试，并重新评估设计意图。
 
-hackernews · arkadiyt · May 14, 17:08 · [社区讨论](https://news.ycombinator.com/item?id=48138136)
+hackernews · RGBCube · May 15, 02:35 · [社区讨论](https://news.ycombinator.com/item?id=48143880)
 
-**背景**: 2024 款 RAV4 等现代车辆配备了数据通信模块（DCM），该模块支持联网服务（如 SOS、远程应用），但同时也会收集和传输遥测数据，这些数据经常与保险公司等第三方共享。物理移除 DCM 和 GPS 天线可以阻止这种数据流，但辅助连接方式可能会重新引入泄露。
+**背景**: VPN 通常通过共享的退出 IP 来路由用户流量以实现匿名。Mullvad 以严格的隐私措施著称，支持现金和门罗币等匿名支付。然而，这种指纹识别向量表明，即使不记录日志，IP 分配模式（退出 IP 并非完全随机分配给每个用户）也可能重新引入追踪风险。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://cartipsdaily.com/toyota-dcm-not-working-fix">Toyota DCM Not Working: What's Really Going On and How to Fix It</a></li>
-<li><a href="https://www.toyotaownersclub.com/forums/topic/193600-data-communication-modul-how-to-removedeactivate/">Data Communication Modul - how to remove/deactivate - Toyota Forum</a></li>
-<li><a href="https://drivecruise.com/toyota-dcm-not-working/">Troubleshooting Toyota DCM Issues: Expert Repair Tips</a></li>
+<li><a href="https://piunikaweb.com/2026/05/15/mullvad-exit-ip-fingerprinting-claims/">Mullvad co-founder responds to exit IP fingerprinting ... - PiunikaWeb</a></li>
+<li><a href="https://vpnrevie.ws/mullvad-exit-ips-fingerprinting/">Mullvad 's Exit IPs Are Fingerprinting Its Users</a></li>
+<li><a href="https://routeharden.com/blog/os-and-tcpip-stack-fingerprinting">OS and TCP/ IP stack fingerprinting · RouteHarden</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者讨论了移除操作的有效性，有人指出即使移除 DCM 后，蓝牙配对仍可通过手机数据实现遥测。其他人提到替代方案，如在某些福特车型上拔出保险丝。一位 RAV4 车主还报告了 GPS 指南针问题，丰田拒绝修复，这促使他进行移除。
+**社区讨论**: Mullvad 联合 CEO 承认了问题，并表示正在测试修复意外行为的补丁。部分评论者质疑了超过 99%概率声明的统计基础，而另一位长期用户则为 Mullvad 辩护，认为 VPN 并非 100%匿名，仍适合注重隐私的用户。
 
-**标签**: `#privacy`, `#automotive`, `#IoT`, `#hacking`, `#telematics`
+**标签**: `#privacy`, `#VPN`, `#fingerprinting`, `#security`, `#Mullvad`
 
 ---
 
 <a id="item-3"></a>
-## [苹果 M5 首次公开 macOS 内核利用漏洞曝光](https://blog.calif.io/p/first-public-kernel-memory-corruption) ⭐️ 8.0/10
+## [vllm v0.21.0：KV 卸载、推测解码、Blackwell 后端](https://github.com/vllm-project/vllm/releases/tag/v0.21.0) ⭐️ 8.0/10
 
-Calif 的安全研究人员披露了首个针对苹果 M5 芯片的 macOS 内核内存破坏利用漏洞，该漏洞绕过了 MIE（内存完整性扩展）硬件防御。团队使用 Anthropic 的 Mythos Preview 模型将两个漏洞和多种技术串联起来，在五天内完成了利用开发。 该利用漏洞意义重大，因为它展示了在苹果最新 M5 芯片上实际的内核入侵能力，可能影响所有使用该芯片的设备。同时，它也凸显了 AI 辅助漏洞研究在加速利用开发方面日益重要的作用。 该利用绕过了 Apple 的硬件内存保护 MTE（内存标记扩展）和 MIE。Calif 发布了一份 55 页的报告，并展示了一段 20 秒的利用演示视频，运行在 macOS 的测试版上。
+vllm v0.21.0 正式弃用 transformers v4 并需要 C++20 编译器，引入带有混合内存分配器的 KV 缓存卸载功能，实现了尊重思考预算的推测解码，并为针对 DeepSeek-R1 和 Kimi-K25 模型的 Blackwell GPU 添加了新的 TOKENSPEED_MLA 注意力后端。 此版本通过将 KV 缓存卸载到 CPU、为推理模型启用推测解码以及支持 NVIDIA 最新的 Blackwell 架构，显著提高了 LLM 推理效率，可降低大规模部署的延迟和硬件成本。 破坏性变更包括弃用 transformers v4（需要迁移到 v5）以及构建时必须使用 C++20 编译器；新的 TOKENSPEED_MLA 后端仅适用于 Blackwell GPU，并支持基于 MLA 的模型如 DeepSeek-R1 和 Kimi-K25。
 
-hackernews · quadrige · May 14, 18:25 · [社区讨论](https://news.ycombinator.com/item?id=48139219)
+github · khluu · May 15, 08:44
 
-**背景**: 苹果 M5 芯片是最新的定制硅芯片，具备 MTE 和 MIE 等先进安全功能用于内存保护。内核内存破坏利用使攻击者能够以内核权限执行任意代码，从而危及整个系统。Anthropic 的 Mythos Preview 是一款 AI 模型，旨在通过生成和串联利用技术来辅助安全研究。
+**背景**: vLLM 是一个面向大语言模型的高吞吐量推理引擎，专为快速服务设计。KV 缓存卸载将缓存的注意力键和值从 GPU 移动到 CPU 内存，以释放 GPU 容量，但会带来一些延迟。推测解码使用较小的草稿模型生成候选令牌，然后由目标模型验证，从而加速生成。Blackwell 是 NVIDIA 的下一代 GPU 架构，MLA（多头潜在注意力）是在 DeepSeek 和 Kimi 模型中使用的高效注意力变体。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://blog.calif.io/p/first-public-kernel-memory-corruption">First public macOS kernel memory corruption exploit on Apple M5</a></li>
-<li><a href="https://malware.news/t/first-public-macos-kernel-memory-corruption-exploit-on-apple-m5/107008">First public macOS kernel memory corruption exploit on Apple M5 - Malware Analysis - Malware Analysis, News and Indicators</a></li>
-<li><a href="https://9to5mac.com/2026/05/14/calif-team-details-how-anthropic-mythos-helped-build-a-working-macos-exploit-in-five-days/">Anthropic Mythos helped Calif build a macOS exploit in five days - 9to5Mac</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/design/hybrid_kv_cache_manager/">Hybrid KV Cache Manager - vLLM</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/design/attention_backends/">Attention Backend Feature Support - vLLM</a></li>
+<li><a href="https://research.google/blog/looking-back-at-speculative-decoding/">Looking back at speculative decoding</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者讨论了 LLM 创建复杂利用链的潜力，有人对安全影响表示担忧。一位用户质疑该漏洞如何逃过 MTE，另一位指出根据打包方式，该利用价值可能在 10 万到 150 万美元之间。一条讽刺评论暗示苹果捏造漏洞以炒作 Mythos。
-
-**标签**: `#security`, `#macOS`, `#kernel exploit`, `#Apple M5`, `#vulnerability`
+**标签**: `#vllm`, `#LLM inference`, `#breaking change`, `#GPU`, `#speculative decoding`
 
 ---
 
 <a id="item-4"></a>
-## [M4 MacBook Air 上运行 RTX 5090 eGPU：游戏与 AI 突破](https://scottjg.com/posts/2026-05-05-egpu-mac-gaming/) ⭐️ 8.0/10
+## [讽刺初创公司提议通过服务互换伪造收入](https://www.revswap.ai/) ⭐️ 8.0/10
 
-一篇技术博客成功展示了通过 Thunderbolt 外接 GPU 扩展坞在 M4 MacBook Air 上运行 RTX 5090，大幅提升了游戏和 LLM 推理性能。 这意义重大，因为它绕过了苹果官方对 Apple Silicon 缺乏 eGPU 支持的限制，为之前没有可行方案的 Mac 用户打开了游戏和 AI 工作负载的大门。 该设置需要在虚拟机中进行 GPU 直通，并且内存窗口限制在 1.5 GB，但性能提升已很明显。作者指出 Vulkan 支持可以进一步提高游戏兼容性。
+一家名为 RevSwap（revswap.ai）的讽刺网站上线，提议初创公司相互交换服务以虚增收入，从而在没有实际现金交易的情况下人为抬高财务指标。 这一讽刺揭露了初创生态系统中真实的会计舞弊风险——企业可能滥用易货交易，向投资者和监管机构掩盖其真实收入情况。 RevSwap 对每笔互换收取 2% 的手续费，其常见问题页面幽默地指出，该平台随后会与其他平台互换自己的收入，从而形成无真实收入的循环。该网站纯属讽刺，但映射了真实存在的欺诈手法，如 VAT 旋转木马骗局。
 
-hackernews · allenleee · May 14, 15:47 · [社区讨论](https://news.ycombinator.com/item?id=48137145)
+hackernews · tormeh · May 15, 13:05 · [社区讨论](https://news.ycombinator.com/item?id=48148084)
 
-**背景**: eGPU 在 Apple Silicon Mac 上官方不支持；苹果声明只有基于 Intel 的 Mac 才能使用。不过，Tiny Corp 最近的驱动程序开发使得 AMD 和 Nvidia eGPU 能够在 Apple Silicon 上用于非图形任务。这篇博客更进一步，实现了完整的图形加速和 AI 工作负载。
+**背景**: 收入确认原则要求仅在履行履约义务时记录收入，且易货交易必须按公允价值计量。在真实商业中，服务互换（易货）只要记录得当、反映真实经济交换便是合法的，但通过循环交易人为夸大收入则构成欺诈。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://support.apple.com/en-us/102363">Use an external graphics processor with your Mac - Apple Support</a></li>
-<li><a href="https://appleinsider.com/articles/26/04/04/amd-or-nvidia-egpus-can-work-on-apple-silicon-macs-but-not-for-graphic-acceleration">AMD or Nvidia eGPUs can work on Apple Silicon Macs, but not for graphic acceleration</a></li>
-<li><a href="https://egpu.io/forums/mac-setup/definitive-macos-thunderbolt-egfx-compatibility-registry-faq/">Definitive macOS Thunderbolt eGPU Compatibility Registry | Thunderbolt macOS eGPU</a></li>
+<li><a href="https://openstax.org/books/principles-financial-accounting/pages/9-1-explain-the-revenue-recognition-principle-and-how-it-relates-to-current-and-future-sales-and-purchase-transactions">9.1 Explain the Revenue Recognition Principle and How It... | OpenStax</a></li>
+<li><a href="https://www.investopedia.com/terms/s/swap.asp">Understanding Swaps: Definition, Uses, and Calculating Gains</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员对这一突破表示兴奋，一些人注意到 LLM 推理的潜力。但也有一些人对 1.5 GB 内存限制表示担忧，并呼吁苹果提供更好的原生支持。
+**社区讨论**: 评论者指出，服务互换（易货）在小企业中很常见，但该讽刺揭示了合法易货与欺诈之间的界限。有人将其与历史上的 VAT 旋转木马欺诈相提并论，也有人欣赏常见问题中关于与其他平台互换收入的自指笑点。
 
-**标签**: `#eGPU`, `#Apple Silicon`, `#gaming`, `#LLM`, `#hardware hack`
+**标签**: `#satire`, `#startup`, `#fraud`, `#revenue`, `#business`
 
 ---
 
 <a id="item-5"></a>
-## [新 Nginx RCE 漏洞需特定配置](https://github.com/DepthFirstDisclosures/Nginx-Rift) ⭐️ 8.0/10
+## [Antirez 发布 DwarfStar4 大模型运行引擎，专为 DeepSeek 4 打造](https://antirez.com/news/165) ⭐️ 8.0/10
 
-一个针对存在 18 年的 Nginx 堆缓冲区溢出漏洞（CVE-2026-42945）的概念验证漏洞利用已在 GitHub 上公开发布，展示了在涉及 rewrite 和 set 指令的特定配置模式下的远程代码执行。 该漏洞影响全球部署最广泛的 Web 服务器 Nginx，在易受攻击的配置下可能导致未经认证的远程代码执行。尽管 ASLR 可以缓解完全利用，但该披露增加了用户修补或应用缓解措施的紧迫性。 利用需要 rewrite 指令的替换字符串中包含问号，随后使用 set 指令引用未命名的 PCRE 捕获组（例如$1）。公开的概念验证假设 ASLR 被禁用，但漏洞报告声称存在可靠的 ASLR 绕过方式。
+Antirez 发布了 DwarfStar4，这是一个轻量级的大语言模型推理运行时，专门用于运行 DeepSeek 4 模型。它支持 Metal、CUDA 和 ROCm 后端，并针对 96GB 内存的 MacBook 等高内存机器进行了优化。 该运行时使得 DeepSeek 4 的高效本地推理成为可能，减少了对云端 API 的依赖，促进了私有的设备端 AI 开发。这可能加速有能力硬件的开发者对开源权重模型的采用。 DwarfStar4 运行 DeepSeek 4 大约需要 96GB 显存，并采用 iMatrix 量化技术来提升质量。该项目基于 llama.cpp 和 GGML 构建，由于作者无法直接访问硬件，AMD ROCm 的支持被单独维护。
 
-hackernews · hetsaraiya · May 14, 17:17 · [社区讨论](https://news.ycombinator.com/item?id=48138268)
+hackernews · caust1c · May 14, 22:29 · [社区讨论](https://news.ycombinator.com/item?id=48142108)
 
-**背景**: Nginx 的内部脚本引擎使用两遍处理系统处理 rewrite 和 set 指令：第一遍计算内存长度，第二遍写入数据。当在替换字符串中使用未命名捕获组与问号结合时，由于长度计算错误可能发生堆缓冲区溢出。该漏洞自 2008 年以来一直存在。已修补的版本包括 Nginx 1.30.1 和 1.31.0。
+**背景**: 大语言模型推理运行时能够使大型语言模型在本地硬件上运行，实现私有化和离线使用。DeepSeek 4 于 2026 年 4 月发布，是中国 AI 公司 DeepSeek 的一款强大的开源权重模型，有 V4 Pro 和 V4 Flash 等变体，参数最高达 1.6 万亿。DwarfStar4 是专为该模型系列优化的运行时。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://cybersecuritynews.com/18-year-old-nginx-rce-vulnerability/">Critical 18-Year-Old NGINX Vulnerability Enables Remote Code ...</a></li>
-<li><a href="https://www.dexpose.io/nginx-rift-cve-2026-42945-an-18-year-old-vulnerability-that-lets-anyone-take-over-your-web-server/">NGINX Rift (CVE-2026-42945): An 18-Year-Old Vulnerability That Lets ...</a></li>
-<li><a href="https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html">18-Year-Old NGINX Rewrite Module Flaw Enables Unauthenticated RCE</a></li>
+<li><a href="https://pasqualepillitteri.it/en/news/2253/ds4-antirez-deepseek-v4-flash-inference-engine">DwarfStar4 (DS4) Roadmap by antirez: DeepSeek V4 Flash on ...</a></li>
+<li><a href="https://x.com/antirez/status/2053797156155163108">DS4 is now called DwarfStar4, since you can put a lot of mass ...</a></li>
+<li><a href="https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/">Three reasons why DeepSeek’s new model matters</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者指出，PoC 中声称但未演示 ASLR 绕过，且该漏洞需要特定的 rewrite/set 模式。几位建议使用命名捕获代替未命名捕获作为缓解措施，这也是 F5 官方建议的。
+**社区讨论**: 评论中的用户报告称，DwarfStar4 的 Q4 量化版本在质量上接近 Claude，尽管速度较慢。一些人对本地模型达到与云服务相当的水平表示兴奋，而另一些人则在讨论 DeepSeek V4 是否已经达到了编码任务所需的‘足够’智能。
 
-**标签**: `#security`, `#nginx`, `#exploit`, `#vulnerability`
+**标签**: `#llm`, `#inference`, `#runtime`, `#deepseek`, `#local-ai`
 
 ---
 
 <a id="item-6"></a>
-## [arXiv 对虚构参考文献实施一年禁令](https://twitter.com/tdietterich/status/2055000956144935055) ⭐️ 8.0/10
+## [Turso 因 AI 生成的虚假报告关闭漏洞赏金计划](https://turso.tech/blog/the-wonders-of-ai) ⭐️ 8.0/10
 
-arXiv 宣布了一项新的行为准则执行措施：提交包含虚构（AI 生成的）参考文献的论文作者，将被禁止一年内提交新的预印本。 这项政策直接针对学术论文中日益严重的 AI 生成虚假引用问题，该问题损害了研究诚信。它为预印本服务器和出版商打击 AI 滥用树立了强有力的先例。 禁令结束后，作者后续提交的论文必须先被知名同行评审场所接受，才能再次提交到 arXiv。该政策由 arXiv 版主 Thomas G. Dietterich 宣布，但可能尚未在 arXiv 的官方政策页面上生效。
+数据库公司 Turso 宣布关闭其漏洞赏金计划，因为团队被大量 AI 生成的虚假漏洞报告淹没，浪费了工程时间。 这凸显了网络安全领域日益严峻的挑战：AI 生成的垃圾信息正在破坏依赖信任和人工审核的漏洞赏金计划的有效性。可能迫使组织采用新的验证方法或收费来过滤虚假报告。 该决定是在面对不可持续的大量低质量、AI 编写的报告需要大量人工审核之后做出的。Turso 没有披露具体虚假数量，但指出这一趋势在整个行业中正在加速。
 
-hackernews · gjuggler · May 14, 20:39 · [社区讨论](https://news.ycombinator.com/item?id=48140922)
+hackernews · tjek · May 15, 13:33 · [社区讨论](https://news.ycombinator.com/item?id=48148391)
 
-**背景**: 虚构参考文献是指引用不存在的出版物，通常由大型语言模型生成。研究发现，在顶级 AI 会议的同行评审论文中出现了此类虚假引用。arXiv 是一个免费的预印本仓库，但提交稿件是一种特权，需遵守行为准则。
+**背景**: 漏洞赏金计划是众包安全举措，组织奖励发现漏洞的道德黑客。最近，攻击者使用大型语言模型等 AI 工具生成看似可信实则虚假的漏洞报告以骗取赏金，使计划维护者不堪重负。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://the-decoder.com/hallucinated-references-are-passing-peer-review-at-top-ai-conferences-and-a-new-open-tool-wants-to-fix-that/">Hallucinated references are passing peer review at top AI</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)">Hallucination (artificial intelligence) - Wikipedia</a></li>
-<li><a href="https://tendril.neural-forge.io/learn/builders/builders-research-fake-citations">Spotting Fake Citations Made by AI · Tendril</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bug_bounty_program">Bug bounty program</a></li>
+<li><a href="https://cyberpress.org/ai-generated-fake-vulnerability-submissions/">AI-Generated Fake Vulnerability Submissions Overrunning Bug Bounty Platforms</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论普遍表示支持，许多人称该禁令‘对科学有益’。一些评论者希望有更好的工具来管理引用，而另一些人则指出，LLM 支持者通常对此类限制持负面反应。
+**社区讨论**: 评论者大多支持这一举措，有人建议替代方案，如要求提交者支付象征性费用或使用工作量证明。其他人批评 GitHub 和 GitLab 未能采取更多措施阻止垃圾账户创建虚假 PR。
 
-**标签**: `#arXiv`, `#academic publishing`, `#AI ethics`, `#hallucinated references`, `#policy`
+**标签**: `#bug bounty`, `#AI`, `#spam`, `#security`, `#open source`
 
 ---
 
 <a id="item-7"></a>
-## [Bun 从 Zig 重写为 Rust 的合并完成](https://github.com/oven-sh/bun/pull/30412) ⭐️ 8.0/10
+## [Codex 现可于 ChatGPT 移动应用中使用](https://openai.com/index/work-with-codex-from-anywhere/) ⭐️ 8.0/10
 
-Bun JavaScript 运行时已完成从 Zig 到 Rust 的重大重写，合并了一个用 Rust 代码替换超过百万行 Zig 代码的拉取请求。 此重写将 Bun 从 Zig 迁移到 Rust，显著提高了内存安全性和编译时错误检测能力，同时消除了悬垂指针、双重释放等整类漏洞。这也使 Bun 成为最大的 Rust 代码库之一，规模接近 Rust 编译器本身，引发了关于 LLM 时代软件复杂性管理的讨论。 重写后产生了超过 100 万行 Rust 代码，其中包含约 10,428 个 `unsafe` 块，分布在 736 个文件中。Bun 团队准备了详细的文档，将 Zig 惯用用法映射到 Rust 等效用法，并且该代码库已经使用了与 Rust 标准库一一对应的内部智能指针类型。
+OpenAI 已将其 Codex 编码代理集成到 ChatGPT 移动应用中，用户可以直接从手机获取 AI 驱动的编码辅助。 这一举措将强大的 AI 编码工具扩展到了移动设备，使开发者能够随时随地编写代码、审查拉取请求和讨论架构变更，显著提升生产力，并使 vibe coding（氛围编码）更加普及。 Codex 在免费计划中即可使用，但交互数据可能用于训练；部分用户反映，移动端屏幕较小且缺乏键盘，使得效率不如桌面端。
 
-hackernews · Chaoses · May 14, 08:15 · [社区讨论](https://news.ycombinator.com/item?id=48132488)
+hackernews · mikeevans · May 14, 20:06 · [社区讨论](https://news.ycombinator.com/item?id=48140529)
 
-**背景**: Bun 是一个快速的全栈 JavaScript 运行时、包管理器和测试运行器，旨在作为 Node.js 的直接替代品，使用 JavaScriptCore 而非 V8。它最初是用 Zig（一种专注于健壮性和最优软件的底层语言）编写的，本次重写为 Rust 旨在利用 Rust 的内存安全保证和强类型系统来减少缺陷。Rust 以其在编译时防止悬垂指针、双重释放等内存错误而闻名。
+**背景**: Codex 是 OpenAI 开发的一套 AI 驱动编码代理，用于自动化软件工程任务。它可通过 CLI、桌面端或现在的移动端使用。'Vibe coding'（氛围编码）是由 Andrej Karpathy 提出的术语，指开发人员用自然语言描述任务，并往往直接接受生成的代码而不进行仔细审查。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Bun_(software)">Bun (software) - Wikipedia</a></li>
-<li><a href="https://github.com/oven-sh/bun">GitHub - oven-sh/bun: Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Zig_(programming_language)">Zig (programming language)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe coding</a></li>
+<li><a href="https://grokipedia.com/page/OpenAI_Codex">OpenAI Codex</a></li>
+<li><a href="https://github.com/openai/codex">GitHub - openai / codex : Lightweight coding agent that runs in your...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员赞扬了详细的映射文档，并指出代码库已为重写做好准备。一位评论者指出该代码库的规模几乎与 Rust 编译器本身相当，称 Bun 是 LLM 时代软件复杂性的风向标。项目负责人 Jarred 承认，虽然 Rust 消除了许多缺陷，但跨 JavaScript 边界的引用泄漏等问题仍需谨慎处理。
+**社区讨论**: 社区成员对随时随地编程带来的生产力提升感到兴奋，有人表示可以在公园里审查 PR 和讨论架构。但另一些人指出，在小屏幕上指导代理更困难，导致更多代码返工，移动端的结果通常不如使用键盘时好。
 
-**标签**: `#bun`, `#rust`, `#javascript-runtime`, `#rewrite`, `#software-engineering`
+**标签**: `#Codex`, `#ChatGPT mobile app`, `#AI coding assistant`, `#developer productivity`, `#vibe coding`
 
 ---
 
 <a id="item-8"></a>
-## [GGUF 格式深度解析：优势与缺失功能](https://nobodywho.ooo/posts/whats-in-a-gguf/) ⭐️ 8.0/10
+## [Nginx 存在 18 年的严重远程代码执行漏洞已修复](https://github.com/DepthFirstDisclosures/Nginx-Rift) ⭐️ 8.0/10
 
-一篇文章分析了 GGUF 二进制模型格式，赞扬了其单文件设计和高效性，同时指出了缺失的功能，如标准化工具调用格式。 这是因为 GGUF 在 llama.cpp 等开源机器学习工具中广泛使用；添加工具调用支持可以标准化跨模型的函数调用，加速从大型语言模型向智能体系统的转变。 GGUF 使用键值元数据系统来实现灵活性，但缺少工具调用定义的元数据，并且投影模型有时会存储在单独的文件中，偏离了单文件的理想设计。
+一个在 Nginx 中存在 18 年的严重远程代码执行漏洞（CVE-2026-42945）被公开，该漏洞利用特定的 rewrite 和 set 指令，并可能绕过 ASLR。该漏洞已在 Nginx 1.31.0 和 1.30.1 版本中修复。 该漏洞非常严重，可使攻击者在受影响服务器上实现远程代码执行，尤其是那些使用了 rewrite 和 set 指令的配置（常见于 WordPress 部署）。潜在 ASLR 绕过进一步增加了风险，使利用更加可靠。 该漏洞的利用需要满足以下条件：rewrite 指令的替换字符串中包含 '?'，并且后续 set 指令引用了未命名的正则捕获组（例如 $1）。公开的概念验证禁用了 ASLR，但研究人员声称存在可靠的绕过方法。缓解措施是使用命名捕获代替未命名捕获。
 
-hackernews · bashbjorn · May 14, 17:21 · [社区讨论](https://news.ycombinator.com/item?id=48138332)
+hackernews · hetsaraiya · May 14, 17:17 · [社区讨论](https://news.ycombinator.com/item?id=48138268)
 
-**背景**: GGUF（GPT 生成统一格式）是一种用于存储大型语言模型的二进制格式，针对快速加载和保存进行了优化，取代了较旧的 GGML 格式。工具调用使大型语言模型能够调用外部函数或 API，这对于类似智能体的行为至关重要；标准化的工具定义格式将提高跨模型的兼容性。
+**背景**: Nginx 是一款广泛使用的 Web 服务器和反向代理。rewrite 指令允许 URL 修改，set 指令用于给变量赋值。地址空间布局随机化（ASLR）是一种安全技术，它随机化内存地址以增加利用难度。该漏洞源于在组合 rewrite 和 set 指令时对 'is_args' 标志的处理不当。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://huggingface.co/docs/hub/gguf">GGUF · Hugging Face</a></li>
-<li><a href="https://www.ibm.com/think/topics/gguf-versus-ggml">GGUF versus GGML | IBM</a></li>
-<li><a href="https://www.ibm.com/think/topics/tool-calling">What Is Tool Calling? | IBM</a></li>
+<li><a href="https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability">NGINX Rift: Achieving NGINX Remote Code Execution via... | depthfirst</a></li>
+<li><a href="https://managingwp.io/2026/05/15/nginx-rift-a-critical-rce-flaw-hidden-in-your-web-server-for-18-years/">NGINX Rift: A Critical RCE Flaw Hidden in Your Web... - Managing WP</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: GGUF 的设计者 Philpax 对投影模型有时分离表示遗憾，并希望合并。uyzstvqs 赞扬了 GGUF 在开源机器学习中的重要性。sbinnee 认为这篇文章很有教育意义，并同意添加工具调用格式将是一个里程碑。Sharlin 指出，单文件模型在图像生成中已经很常见，质疑了 GGUF 的独特性。
+**社区讨论**: 社区评论指出该漏洞利用需要特定前提条件，已公开的概念验证并未绕过 ASLR，但研究人员声称存在绕过方法。部分用户对 Snyk 等工具未检测到软件包发行版中的漏洞表示担忧。其他人则提到 F5 的官方缓解建议，并指出可以使用命名捕获作为临时解决方案。
 
-**标签**: `#GGUF`, `#machine learning`, `#open source`, `#AI`, `#model format`
+**标签**: `#security`, `#nginx`, `#exploit`, `#vulnerability`, `#aslr`
 
 ---
 
 <a id="item-9"></a>
-## [安大略省审计：医疗 AI 笔记工具频繁出错](https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771) ⭐️ 8.0/10
+## [IBM Granite 发布多语言嵌入模型 R2，支持 32K 上下文](https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2) ⭐️ 8.0/10
 
-安大略省审计人员发现，医生使用的 AI 笔记工具频繁生成错误的医疗事实，包括虚假诊断和症状，患者和专业人士的个人经历也证实了这一点。 这削弱了人们对 AI 在关键医疗任务中的信任，可能导致误诊或不当治疗，凸显了建立验证机制和更高准确性标准的紧迫性。 报告未说明具体错误率，但社区评论指出存在将跑步膝诊断转化为骨质疏松等错误，以及 AI 摘要捏造商业会议中的承诺等问题。
+IBM Granite 以 Apache 2.0 开源协议发布了多语言 Granite Embedding R2 模型，其上下文窗口达到 32,768 个 token，并在参数量低于 1 亿的模型中实现了顶尖的检索质量。 该发布提供了一个高质量的开源多语言嵌入模型，在检索任务中表现出色，能够改善跨语言搜索、检索增强生成（RAG）以及覆盖 200 多种语言的企业级密集检索。 这些模型支持 200 多种语言，并对 52 种语言和编程代码的检索质量进行了增强，其中包括一个 97M 参数、384 维嵌入的变体。32K 上下文窗口相比之前的 R1 版本扩大了 64 倍。
 
-hackernews · sohkamyung · May 14, 22:37 · [社区讨论](https://news.ycombinator.com/item?id=48142188)
+rss · Hugging Face Blog · May 14, 18:55
 
-**背景**: 大型语言模型（LLM）驱动着许多 AI 笔记工具；它们可能生成听起来合理但事实错误的输出，这种现象称为 AI 幻觉。在医疗领域，即使小错误也可能对患者护理造成严重后果。
+**背景**: 嵌入模型将文本转换为稠密向量表示，用于相似度搜索和信息检索。多语言嵌入通过将不同语言的文本映射到共享向量空间，实现跨语言理解。参数量低于 1 亿的模型被视为紧凑高效，适合在资源受限的环境中部署。IBM 的 Granite 系列专注于企业级密集检索应用。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/AI_hallucination">AI hallucination</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Large_language_model">Large language model</a></li>
+<li><a href="https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2">Granite Embedding Multilingual R2: Open Apache 2.0 ...</a></li>
+<li><a href="https://arxiv.org/abs/2605.13521">[2605.13521] Granite Embedding Multilingual R2 Models</a></li>
+<li><a href="https://www.ibm.com/granite/docs/models/embedding">Granite Embedding - IBM</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者分享了 AI 笔记工具出现重大事实错误的个人经历，强调检查转录和带时间戳录音的必要性。一些人指出，当前的 LLM 摘要常常遗漏细微差别并编造细节。
-
-**标签**: `#AI`, `#healthcare`, `#LLM`, `#accuracy`, `#note-taking`
+**标签**: `#embeddings`, `#multilingual`, `#open source`, `#NLP`, `#information retrieval`
 
 ---
 
 <a id="item-10"></a>
-## [MIT 校长谈资金与人才管道挑战](https://president.mit.edu/writing-speeches/video-transcript-message-president-kornbluth-about-funding-and-talent-pipeline) ⭐️ 8.0/10
+## [OpenAI 计划让 ChatGPT 通过 Plaid 访问你的银行账户](https://www.theverge.com/ai-artificial-intelligence/931122/openai-chatgpt-financial-accounts-plaid-connection) ⭐️ 8.0/10
 
-MIT 校长萨莉·科恩布鲁斯发布视频消息，讨论研究资金和人才管道面临的挑战，指出联邦资助成功率下降以及吸引国际学生困难的问题。 这一信号表明，即使是 MIT 这样的顶尖学府也面临学术界的系统性问题，可能重塑全球研究、创新和高等教育的未来。 该视频是发布在 MIT 校长网站上的文字稿，引发了社区广泛讨论，涉及对学术界的失望、博士学习时间过长以及资金削减对学生录取的影响。
+OpenAI 预览了一项新功能，允许 ChatGPT 通过 Plaid 安全连接到用户的金融账户，Plaid 是一个被超过 12,000 家金融机构使用的平台。 此举可能通过提供个性化金融服务大幅扩展 ChatGPT 的实用性，但也引发了关于将敏感财务数据托付给 AI 的重大隐私和安全担忧。 该功能目前处于预览阶段，需要用户明确同意通过 Plaid 关联账户，而 Plaid 此前曾因数据抓取和共享做法引发争议。
 
-hackernews · dmayo · May 14, 14:51 · [社区讨论](https://news.ycombinator.com/item?id=48136262)
+rss · The Verge AI · May 15, 16:00
 
-**背景**: 研究型大学严重依赖联邦资助来支持研究生和研究项目。近年来，资助申请成功率大幅下降，造成不确定性。此外，限制性的签证政策使得国际学生更难在美国学习，进一步加剧了人才管道压力。这些因素导致博士毕业生日益失望，许多人尽管最初打算留在学术界，但最终选择离开。
+**背景**: Plaid 是一个数据传输网络，负责将用户的银行账户连接到各种金融科技应用。它被超过 12,000 家金融机构使用，包括 Schwab 和 Fidelity 等主要机构。OpenAI 的集成将使 ChatGPT 能够访问财务数据，用于预算编制或交易查询等任务，但这也带来了 AI 误用或泄露数据的风险。
 
-**社区讨论**: 评论反映出多种担忧：有人哀叹学术界体系破碎，博士学习时间长、就业前景差；也有人指出离开学术界进入工业界并非浪费。少数评论者还提到中国高校作为替代选项的崛起。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Plaid_Inc.">Plaid Inc. - Wikipedia</a></li>
+<li><a href="https://plaid.com/how-it-works-for-consumers/">Plaid helps you link your financial institutions | Plaid</a></li>
 
-**标签**: `#academia`, `#research funding`, `#talent pipeline`, `#higher education policy`
+</ul>
+</details>
+
+**标签**: `#AI`, `#privacy`, `#finance`, `#OpenAI`, `#ChatGPT`
 
 ---
 
 <a id="item-11"></a>
-## [IBM 发布 32K 上下文的多语言嵌入模型](https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2) ⭐️ 8.0/10
+## [AI 研究论文面临引用膨胀问题](https://www.theverge.com/ai-artificial-intelligence/930522/ai-research-papers-slop-peer-review-problem) ⭐️ 8.0/10
 
-IBM 发布了 Granite Embedding Multilingual R2，这是一个基于 Apache 2.0 开源许可的多语言嵌入模型。它在 MTEB 排行榜上实现了次百万元参数模型中最佳的检索质量，并支持 32K 上下文窗口。 该模型为多语言检索树立了新标准，在小尺寸下提供顶级性能，支持在有限硬件上部署。其开源特性和卓越质量惠及 NLP 和检索社区，促进进一步创新。 该模型提供 97M 和 311M 参数两个版本，通过对比微调、知识蒸馏和模型合并训练而成。其中 97M 参数版本在 MTEB 排行榜上位列次百万元参数多语言嵌入模型第一。
+一名博士后研究员发现他的一篇旧论文被异常大量地不当引用，凸显了 AI 研究中引用膨胀或不相关引用日益严重的问题。 这一趋势通过扭曲对资金、晋升和声誉至关重要的引用指标来威胁学术诚信，并给同行评审员带来低质量论文的负担。 该论文评估了一种流行病学数据的统计分析方法，却被许多 AI 论文在没有适当相关性的情况下引用，表明存在系统性的引用滥用。
 
-rss · Hugging Face Blog · May 14, 18:55
+rss · The Verge AI · May 15, 11:00
 
-**背景**: 嵌入模型将文本转换为捕捉语义的密集向量表示，支持语义搜索和检索等任务。大规模文本嵌入基准（MTEB）跨多种语言和任务评估这类模型。次百万元参数模型在资源受限环境中具有吸引力，同时保持强劲性能。
+**背景**: 在学术界，引用次数被用作研究影响力和质量的代理指标，影响职业发展和资助决策。同行评审过程本应确保质量，但论文数量增加和发表压力导致了一些捷径，比如不阅读就引用论文。AI 研究作为一个快速发展的领域，由于新研究者涌入和借助语言模型生成论文的便利性，尤其容易受到此类做法的影响。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2">ibm-granite/granite-embedding-97m-multilingual-r2 · Hugging Face</a></li>
-<li><a href="https://www.ibm.com/granite/docs/models/embedding">Granite Embedding - IBM Granite</a></li>
-
-</ul>
-</details>
-
-**标签**: `#embeddings`, `#multilingual`, `#NLP`, `#retrieval`, `#open-source`
+**标签**: `#AI research`, `#peer review`, `#citation analysis`, `#academic integrity`
 
 ---
 
 <a id="item-12"></a>
-## [埃隆·马斯克与山姆·奥特曼就 OpenAI 未来对簿公堂](https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit) ⭐️ 8.0/10
+## [微软取消员工 Claude Code 许可证](https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad) ⭐️ 8.0/10
 
-埃隆·马斯克对 OpenAI 及其 CEO 山姆·奥特曼提起诉讼，指控该公司放弃了最初为人类福祉而发展的非营利使命，转而追求利润。该审判目前正在进行中，可能重塑 OpenAI 的治理结构和未来方向。 这场审判触及了人工智能发展的核心矛盾：商业利益与伦理责任之间的平衡。其结果可能为 AI 公司的治理以及是否必须遵守创始使命树立先例。 马斯克于 2024 年提起诉讼，指控 OpenAI 与微软的紧密合作以及推出 ChatGPT 等营利性产品违反了其创始章程。此案凸显了关于 AI 发展方向和非营利组织角色的持续辩论。
+微软已开始取消员工对 Claude Code 的访问权限，此前该公司曾鼓励项目经理、设计师等非开发人员使用 Anthropic 的 AI 工具尝试编程。 这一决定表明微软内部 AI 战略发生转变，并引发对 AI 编程工具在传统开发者之外采用情况的质疑，可能影响开发者工具市场的竞争格局。 微软最初于 12 月向数千名员工开放了访问权限，但目前正在撤销这些许可证。Claude Code 是 Anthropic 开发的代理式编程工具，能够编辑文件、运行命令并理解整个代码库。
 
-rss · The Verge AI · May 14, 15:46
+rss · The Verge AI · May 14, 19:00
 
-**背景**: OpenAI 于 2015 年作为非营利组织成立，其使命是确保人工通用智能（AGI）造福全人类。埃隆·马斯克是联合创始人和早期捐助者，但他于 2018 年离开了董事会。此后，OpenAI 重组为一家有利润上限的公司，并与微软合作，引发了对是否坚持最初目标的担忧。
-
-**标签**: `#OpenAI`, `#Lawsuit`, `#AI Governance`, `#Elon Musk`, `#Sam Altman`
-
----
-
-<a id="item-13"></a>
-## [TurboQuant 研究：FP8 KV 缓存量化整体最佳](https://vllm.ai/blog/2026-05-11-turboquant) ⭐️ 8.0/10
-
-vLLM 博客上的一项全面研究评估了 TurboQuant 变体与 FP8 KV 缓存量化的性能，结论是 FP8 仍是最佳默认选择，TurboQuant 4bit-nc 是内存受限边缘部署中最实用的变体。 这项研究为 LLM 服务效率提供了明确指导，帮助实践者选择合适的 KV 缓存量化方法。它通过展示 TurboQuant 相比简单的 FP8 量化优势有限，挑战了围绕 TurboQuant 的炒作，FP8 可以在不显著损失精度的情况下节省大量内存。 研究发现通过--kv-cache-dtype fp8 的 FP8 量化提供 2 倍 KV 缓存容量，精度损失可忽略，在大多数指标上与 BF16 相当。TurboQuant k8v4 仅提供 2.4 倍节省，但吞吐量下降，而 3bit-nc 和 k3v4-nc 显示出明显的精度下降和延迟增加。
-
-reddit · r/LocalLLaMA · MajorZesty · May 14, 20:59 · [社区讨论](https://www.reddit.com/r/LocalLLaMA/comments/1tdb4ic/a_first_comprehensive_study_of_turboquant/)
-
-**背景**: KV 缓存量化可减少大语言模型推理中键值缓存的内存占用，从而支持更长的上下文窗口和更高的吞吐量。FP8 量化使用 8 位浮点格式，而 TurboQuant 是 Google Research 开发的一种更新的在线向量量化算法，旨在实现更高的压缩比。本研究系统地比较了它们的精度和性能权衡。
+**背景**: Claude Code 是 Anthropic 开发的代理式编程系统，允许开发者通过自然语言与代码库交互。它可以读取代码、跨文件修改、运行测试并提交工作。对于非工程师而言，它降低了软件开发的入门门槛。微软曾将其作为非开发人员尝试编程的一种方式推广。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/TurboQuant">TurboQuant</a></li>
-<li><a href="https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache/">Quantized KV Cache - vLLM</a></li>
+<li><a href="https://www.anthropic.com/product/claude-code">Claude Code | Anthropic's agentic coding system</a></li>
+<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论显示反应不一：一些用户持怀疑态度，更喜欢未量化的 KV 缓存，而另一些用户则认为 TurboQuant 4bit-nc 在边缘情况下有用。一个显著的批评是缺乏与 Q4 量化的比较，而 Q4 在 VRAM 受限用户中很常见。一位用户报告了在 Gemma 4 上使用 TurboQuant 2-3 处理 128k 上下文的积极体验。
-
-**标签**: `#quantization`, `#LLM`, `#KV-cache`, `#performance`, `#vLLM`
-
----
-
-<a id="item-14"></a>
-## [RTX 5000 PRO (48GB) 在本地 LLM 推理中表现惊艳](https://www.reddit.com/r/LocalLLaMA/comments/1td53ii/the_rtx_5000_pro_48gb_arrived_and_it_is_better/) ⭐️ 8.0/10
-
-一位 Reddit 用户报告称，RTX 5000 PRO（48GB）在本地 LLM 推理中表现出色，预处理速度达到 4400 tokens/s，GPU 售价 4300 美元，整机花费 5600 美元。 这款 GPU 为本地 LLM 推理提供了比 RTX 5090 等消费级显卡更具吸引力的选择，尤其适用于长上下文、RAG 或批量处理任务，因其卓越的预处理速度和更低的功耗。 该卡预处理速度达 4400 t/s，常被忽略而更关注生成速度；用户认为尽管需要组装整机，但其性价比很高。RTX 5000 PRO 本质上是一款价格接近消费级的服务器 GPU。
-
-reddit · r/LocalLLaMA · Valuable-Run2129 · May 14, 17:28
-
-**背景**: 在 LLM 推理中，预处理阶段处理输入提示并生成初始 KV 缓存，直接影响首 token 延迟（TTFT）。高预处理速度对于长上下文任务和批量作业至关重要。RTX 5090 等消费级 GPU 的预处理性能通常较低且功耗更高，这使得 RTX 5000 PRO 成为一款专业替代品。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.morphllm.com/llm-inference">LLM Inference: Prefill, Decode, KV Cache & Cost Guide (2026) | Morph</a></li>
-<li><a href="https://redis.io/blog/prefill-vs-decode/">Prefill vs Decode: LLM Inference Phases Explained - Redis</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区反应总体积极，用户强调该卡卓越的预处理速度和电费节省。部分人指出 RTX 6000 Pro 性能更强但价格更高，也有观点认为 RTX 5000 PRO 依然定价过高。主要共识是预处理速度在 GPU 对比中常被低估。
-
-**标签**: `#GPU`, `#LLM inference`, `#local LLM`, `#hardware review`, `#RTX 5000 PRO`
-
----
-
-<a id="item-15"></a>
-## [Anthropic 弃用 Opus 4.6 和 Sonnet 4.6 手动扩展思考](https://www.reddit.com/r/ClaudeAI/comments/1td4dl1/extended_thinking_being_deprecated_for_supported/) ⭐️ 8.0/10
-
-Anthropic 已弃用 Claude Opus 4.6 和 Claude Sonnet 4.6 的手动扩展思考（固定 token 预算），并强制将自适应思考设为默认模式。此变更同样适用于 Opus 4.7，其手动扩展思考现在会返回 400 错误。 这一变更剥夺了开发者和 API 用户对推理 token 预算的控制，此前他们可以设定固定预算以保障质量。强制采用自适应思考可能会降低需要持续深度推理场景的可靠性，可能导致用户转向竞品模型或提供商。 对于 Opus 4.6 和 Sonnet 4.6，手动扩展思考仍可使用，但已被官方弃用，将在未来版本中移除。在 Opus 4.7 上，使用已弃用的 `thinking: {type: "enabled", budget_tokens: N}` 参数会立即返回 400 错误，仅支持自适应思考（`thinking: {type: "adaptive", effort: ...}`）。
-
-reddit · r/ClaudeAI · CaffeineBrogrammer · May 14, 17:03
-
-**背景**: 扩展思考允许开发者为 Claude 的内部推理分配固定的 token 预算，确保复杂任务获得一致的思考深度。自适应思考是 Anthropic 引入的替代方案，让 Claude 根据请求动态决定应用多少推理，通过 'effort' 参数控制强度。这一转变将推理控制权从开发者转移到模型，部分用户认为这会降低可靠性和可预测性。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://platform.claude.com/docs/en/build-with-claude/adaptive-thinking">Adaptive thinking - Claude API Docs</a></li>
-<li><a href="https://allthings.how/claude-adaptive-thinking-explained-how-it-works-and-when-to-use-it/">Claude Adaptive Thinking Explained: How It Works and When to ...</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区反馈普遍负面，用户报告说自适应思考经常未能启用足够的推理，导致答案不准确。许多人表示考虑到切换到其他提供商，如 Codex 或 OpenAI，认为这一强制变更导致控制权丧失和质量下降。
-
-**标签**: `#Claude`, `#API change`, `#developer experience`, `#adaptive thinking`, `#model deprecation`
+**标签**: `#AI coding`, `#Claude Code`, `#Microsoft`, `#developer tools`, `#Anthropic`
 
 ---
