@@ -37,6 +37,43 @@ function Send-ChatMessage {
     }
 }
 
+function Invoke-GitForPages {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string[]]$Arguments,
+
+        [Parameter(Mandatory = $true)]
+        [string]$StepName
+    )
+
+    $attempts = 2
+    for ($attempt = 1; $attempt -le $attempts; $attempt++) {
+        & git @Arguments 2>&1 | Tee-Object -FilePath $LogPath -Append | Out-Null
+        if ($LASTEXITCODE -eq 0) {
+            return $true
+        }
+
+        $exitCode = $LASTEXITCODE
+        $lockPath = Join-Path $Root ".git\index.lock"
+        $lockState = if (Test-Path $lockPath) {
+            $lock = Get-Item -LiteralPath $lockPath -Force
+            "present; last_write=$($lock.LastWriteTime.ToString('o'))"
+        } else {
+            "not present"
+        }
+
+        "GitHub Pages publish warning: $StepName failed on attempt $attempt/$attempts with code $exitCode; .git\index.lock is $lockState" |
+            Tee-Object -FilePath $LogPath -Append |
+            Out-Null
+
+        if ($attempt -lt $attempts) {
+            Start-Sleep -Seconds 3
+        }
+    }
+
+    return $false
+}
+
 function Publish-GitHubPages {
     param(
         [Parameter(Mandatory = $true)]
@@ -60,8 +97,7 @@ function Publish-GitHubPages {
     $summaryDate = if ($Summary.BaseName -match "(\d{4}-\d{2}-\d{2})") { $Matches[1] } else { Get-Date -Format "yyyy-MM-dd" }
     $commitMessage = "Daily Horizon summary: $summaryDate"
 
-    & git add docs 2>&1 | Tee-Object -FilePath $LogPath -Append | Out-Null
-    if ($LASTEXITCODE -ne 0) {
+    if (-not (Invoke-GitForPages -Arguments @("add", "docs") -StepName "git add docs")) {
         return "GitHub Pages publish failed: git add docs exited with code $LASTEXITCODE. Log: $LogPath"
     }
 
