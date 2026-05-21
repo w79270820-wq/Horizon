@@ -5,334 +5,177 @@ date: 2026-05-21
 lang: zh
 ---
 
-> From 52 items, 14 important content pieces were selected
+> From 31 items, 7 important content pieces were selected
 
 ---
 
-1. [OpenAI 模型推翻 80 年历史的 Erdős 猜想](#item-1) ⭐️ 10.0/10
-2. [SpaceX S-1 披露每月 12.5 亿美元 Anthropic 云服务协议](#item-2) ⭐️ 10.0/10
-3. [Qwen3.7-Max：具有智能体能力的新前沿模型](#item-3) ⭐️ 9.0/10
-4. [GitHub 确认 3800 个仓库因恶意 VSCode 扩展被入侵](#item-4) ⭐️ 8.0/10
-5. [科罗拉多州 SB051 修正案豁免开源项目](#item-5) ⭐️ 8.0/10
-6. [Mozilla 告别 asm.js，全面拥抱 WebAssembly](#item-6) ⭐️ 8.0/10
-7. [Railway 事件报告：GCP 账户暂停导致服务中断](#item-7) ⭐️ 8.0/10
-8. [SBCL：终极汇编代码试验板](#item-8) ⭐️ 8.0/10
-9. [谷歌优先 AI 内容，威胁开放网络](#item-9) ⭐️ 8.0/10
-10. [Meta 在沙特和阿联酋屏蔽人权账户](#item-10) ⭐️ 8.0/10
-11. [Cohere 发布高效 MoE 模型 Command A+](#item-11) ⭐️ 8.0/10
-12. [Qwen 3.6 35B GGUF：NTP 与 MTP 基准测试结果](#item-12) ⭐️ 8.0/10
-13. [llama.cpp 将 MTP 草案路径移至后端采样以提升速度](#item-13) ⭐️ 8.0/10
-14. [资深工程师分享使用 Claude Code 的“氛围编码”规则](#item-14) ⭐️ 8.0/10
+1. [OpenAI 模型推翻离散几何 80 年猜想](#item-1) ⭐️ 10.0/10
+2. [SpaceX S-1 披露与 Anthropic 每月 12.5 亿美元的算力协议](#item-2) ⭐️ 9.0/10
+3. [在 MacBook 上本地索引一年视频，使用 Gemma4-31B](#item-3) ⭐️ 8.0/10
+4. [Rmux：基于 Rust 的终端复用器，配备类似 Playwright 的 SDK](#item-4) ⭐️ 8.0/10
+5. [AI 训练是一种大规模未授权盗用](#item-5) ⭐️ 8.0/10
+6. [逆向工程苹果视频壁纸并开源](#item-6) ⭐️ 8.0/10
+7. [Knuth 关于字母 S 设计的经典论文](#item-7) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [OpenAI 模型推翻 80 年历史的 Erdős 猜想](https://openai.com/index/model-disproves-discrete-geometry-conjecture/) ⭐️ 10.0/10
+## [OpenAI 模型推翻离散几何 80 年猜想](https://openai.com/index/model-disproves-discrete-geometry-conjecture/) ⭐️ 10.0/10
 
-OpenAI 的通用推理模型推翻了一个离散几何学的核心猜想，即 Erdős 在 1946 年提出的单位距离问题。 这一成就标志着 AI 辅助数学研究的里程碑，表明 AI 能够自主解决长期悬而未决的问题，并有可能加速数学领域的进展。 该模型为无穷多个 n 值构造了反例，利用代数数论中的复杂思想推翻了 Erdős 提出的 n^(1+o(1))上界。
+OpenAI 的一个推理模型于 2026 年 5 月 20 日推翻了厄尔多斯单位距离猜想，这是离散几何中一个已有 80 年历史的核心问题。 这标志着 AI 首次独立推翻一个长期存在的数学猜想，展示了 AI 在数学研究中作为共同发现者的潜力，并可能加速其他领域的发现。 该反例通过将一个 1960 年代的数论工具应用于几何问题而发现，展示了模型跨领域转移知识的能力。该证明已在 Lean 定理证明器中形式化。
 
 hackernews · tedsanders · May 20, 19:05 · [社区讨论](https://news.ycombinator.com/item?id=48212493)
 
-**背景**: 单位距离问题探讨的是平面上 n 个点之间最多能有多少对单位距离。Erdős 猜想其上界为 n^(1+o(1))，即数量仅略超线性增长。OpenAI 的模型找到了实现更高增长率的构型，从而推翻了这一猜想。
+**背景**: 厄尔多斯单位距离问题询问：平面上的 n 个点最多能形成多少对单位距离（恰好相距 1 的点对）？80 年来，厄尔多斯的一个猜想认为最大数量不超过某个常数 c 乘以 n^(1+c/log log n)。OpenAI 的模型找到了一个反例，证明该界限不正确。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">An OpenAI model has disproved a central conjecture in discrete geometry</a></li>
-<li><a href="https://aitoolly.com/ai-news/article/2026-05-21-openai-reasoning-model-disproves-longstanding-erds-conjecture-in-discrete-geometry">OpenAI AI Disproves Erdős Discrete Geometry Conjecture</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Discrete_geometry">Discrete geometry</a></li>
+<li><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">An OpenAI model has disproved a central conjecture in discrete ...</a></li>
+<li><a href="https://www.roborhythms.com/openai-disproves-erdos-conjecture-may-2026/">OpenAI Cracked an 80 Year Erdos Conjecture in May 2026</a></li>
+<li><a href="https://startupfortune.com/openais-geometry-breakthrough-may-be-its-strongest-case-yet-for-ai-as-co-discoverer/">OpenAI's geometry breakthrough may be its strongest case yet for AI ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者表现出兴奋，一位数学博士后称该证明新颖且意义重大。其他人则强调该模型如何运用代数数论思想解决基础几何问题，并有人推测 AI 可能在学会日常事务之前先获得菲尔兹奖。
+**社区讨论**: Hacker News 上的数学家们表示兴奋，认为证明是新颖的，并引入了代数数论的思想。一些人评论说反例不如证明有趣，但许多人同意这表明 AI 具有跨越专业领域的潜力。其他人预测 AI 在管理麦当劳之前就会获得菲尔兹奖。
 
-**标签**: `#AI`, `#mathematics`, `#OpenAI`, `#geometry`, `#machine learning`
+**标签**: `#AI`, `#mathematics`, `#discrete geometry`, `#OpenAI`, `#research`
 
 ---
 
 <a id="item-2"></a>
-## [SpaceX S-1 披露每月 12.5 亿美元 Anthropic 云服务协议](https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything) ⭐️ 10.0/10
+## [SpaceX S-1 披露与 Anthropic 每月 12.5 亿美元的算力协议](https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything) ⭐️ 9.0/10
 
-SpaceX 的 S-1 文件披露与 Anthropic 达成云服务协议，允许其使用 COLOSSUS 和 COLOSSUS II 超级计算机的计算能力，每月收费 12.5 亿美元，合约持续至 2029 年 5 月。 该协议标志着 SpaceX 作为 AI 工作负载主要云服务提供商的入场，巨额资金承诺凸显了对专业 AI 基础设施日益增长的需求。 协议包括 2026 年 5 月和 6 月以较低费用进行容量爬坡，任一方可提前 90 天通知终止。SpaceX 还使用 COLOSSUS II 训练自己的 Grok 5 模型。
+SpaceX 的 S-1 IPO 文件披露，与 Anthropic 签订了一份每月 12.5 亿美元的云服务协议，允许其使用 COLOSSUS 和 COLOSSUS II 超级计算机的算力，协议持续至 2029 年 5 月。 该协议凸显了 AI 基础设施投入的巨大规模，并表明像 SpaceX 这样的云提供商可以将其为内部 AI（如 Grok 5）构建的超级计算机用于向 Anthropic 等第三方创收，这是一次战略转变。 协议包括在 2026 年 5 月和 6 月以较低费用进行容量提升，任何一方均可提前 90 天通知终止。SpaceX 在 2026 年初收购了 xAI，从而获得了最初为训练 Grok 而建造的 Colossus 超级计算机的控制权。
 
 rss · Simon Willison · May 20, 22:26
 
-**背景**: COLOSSUS 是由 xAI（SpaceXAI）为训练其 Grok 聊天机器人而构建的超级计算机，现已作为云服务提供。SpaceX 的 S-1 文件显示 2025 年收入 187 亿美元，运营亏损 26 亿美元，反映出对基础设施的巨额投资。
+**背景**: Colossus 是世界上最大的 AI 超级计算机之一，于 2024 年在田纳西州孟菲斯建成，配备超过 22 万块 Nvidia GPU（H100、H200、GB200）。它最初由 xAI 建造，用于训练 Grok 系列模型。SpaceX 收购 xAI 后，Colossus 成为 SpaceX 云计算服务的一部分。Colossus II 是一个更大的设施，目前负责 Grok 5 的训练。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Colossus_(supercomputer)">Colossus (supercomputer) - Wikipedia</a></li>
-<li><a href="https://www.idlen.io/news/anthropic-spacex-colossus-memphis-300mw-gpu-deal-2026/">Anthropic rents all of SpaceX's Colossus 1: 222K GPUs, 300 MW ...</a></li>
-<li><a href="https://www.forbes.com/sites/antoniopequenoiv/2026/05/06/musks-spacex-will-give-anthropic-access-to-its-colossus-super-computer-for-ai-training/">Musk’s SpaceX Will Give Anthropic Access To Its ‘Colossus ...</a></li>
+<li><a href="https://thenewstack.io/anthropic-spacex-claude-limits/">Anthropic recruited SpaceX's 220,000-GPU Colossus 1 to fix what Claude users kept complaining about - The New Stack</a></li>
+<li><a href="https://www.wired.com/story/spacex-ipo-anthropic-compute-finances-risks/">SpaceX IPO Filing Reveals Anthropic Is Paying $15 Billion... | WIRED</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者注意到该协议的庞大规模，一些人根据财务数据对 SpaceX 的估值表示怀疑。其他人则讨论了基于空间的数据中心的可行性，普遍认为该公司的云业务可能具有变革性。
-
-**标签**: `#AI`, `#SpaceX`, `#Anthropic`, `#cloud computing`, `#infrastructure`
+**标签**: `#AI`, `#cloud computing`, `#SpaceX`, `#Anthropic`, `#Grok 5`
 
 ---
 
 <a id="item-3"></a>
-## [Qwen3.7-Max：具有智能体能力的新前沿模型](https://qwen.ai/blog?id=qwen3.7) ⭐️ 9.0/10
+## [在 MacBook 上本地索引一年视频，使用 Gemma4-31B](https://blog.simbastack.com/indexed-a-year-of-video-locally/) ⭐️ 8.0/10
 
-Qwen 发布了 Qwen3.7-Max，这是一个具有最先进性能和智能体能力的新前沿模型。 该模型标志着开源 AI 的重大进步，社区讨论将其与 Opus 4.7、Gemini 3.1 Pro 和 GPT5.5 等顶级专有模型进行比较，凸显其竞争力。 根据社区基准测试，Qwen3.7-Max 排名第五，与 GPT 5.4 持平，领先于 Gemini 3.5 Flash，且报告的非幻觉率超过领先模型。
+一位开发者使用 Google 的 Gemma4-31B 模型，在 2021 款 MacBook 上本地索引了一整年的个人视频素材，利用了高达 50GB 的交换内存，并在 GitHub 上以 MIT 许可证发布了开源代码。 这表明大型 AI 模型可以在消费级硬件上运行，用于保护隐私的个人归档任务，可能开启无需云端的本地视频索引和编辑新应用。 该方案使用了 Gemma4-31B（一个 310 亿参数的密集模型），在 16GB RAM 的 MacBook 上启用了 50GB 交换内存。GitHub 上的代码仓库'framedex'仍处于早期测试阶段，作者计划与 DaVinci Resolve 集成以实现更快的编辑。
 
-hackernews · kevinsimper · May 20, 10:35 · [社区讨论](https://news.ycombinator.com/item?id=48205626)
+hackernews · asenna · May 21, 14:01 · [社区讨论](https://news.ycombinator.com/item?id=48222733)
 
-**背景**: 前沿模型是能力最领先的最先进 AI 模型，通常需要大量资源进行开发。智能体能力指的是 AI 自主行动、很少需要人工干预的能力。Qwen 是阿里巴巴推出的开源 AI 模型系列。
+**背景**: Gemma4 是 Google 的开源模型系列，其中 31B 变体是一个密集模型，在推理和编码任务上提供前沿性能。在笔记本电脑上本地运行此类大型模型需要大量内存和交换空间，而配备统一内存的现代 MacBook 可以处理大量交换而不出现严重降速。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Frontier_model">Frontier model</a></li>
-<li><a href="https://aiguru.ae/insights/glossary/frontier-model">Frontier Model — AI Glossary | AI Guru® Insights — UAE</a></li>
+<li><a href="https://huggingface.co/google/gemma-4-31B">google/ gemma - 4 - 31 B · Hugging Face</a></li>
+<li><a href="https://build.nvidia.com/google/gemma-4-31b-it">gemma - 4 - 31 b -it Model by Google | NVIDIA NIM</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区情绪总体积极，用户称赞其性能和开源性质。有人希望在美国提供托管服务，并与最新竞争对手版本进行比较。用户还讨论了实际应用方面，例如使用 llama.cpp 和 OpenCode 作为 Claude Code 的免费替代方案。
+**社区讨论**: 评论者对技术成就感兴趣，但批评写作风格由于明显由 AI 生成而显得“粗糙”。一些人看到了本地模型在个人上下文中的潜力，而另一些人分享了在旧硬件上运行 Gemma 并伴随高风扇噪音的类似经历。作者回应并分享了代码和未来计划。
 
-**标签**: `#AI`, `#LLM`, `#Qwen`, `#open-source`, `#machine learning`
+**标签**: `#AI`, `#video indexing`, `#local models`, `#personal archives`, `#Gemma4`
 
 ---
 
 <a id="item-4"></a>
-## [GitHub 确认 3800 个仓库因恶意 VSCode 扩展被入侵](https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/) ⭐️ 8.0/10
+## [Rmux：基于 Rust 的终端复用器，配备类似 Playwright 的 SDK](https://github.com/helvesec/rmux) ⭐️ 8.0/10
 
-GitHub 确认一个恶意 VSCode 扩展导致 3800 个仓库被未授权访问，代码和凭证遭泄露。此次入侵影响 GitHub 内部仓库，表明是一次复杂的供应链攻击。 此事件凸显了通过 VSCode 扩展等开发者工具进行供应链攻击的风险日益增加，这些工具被广泛信任。它强调了在扩展市场中进行更严格安全审查以及平台所有者之间跨生态系统协调的迫切需求。 恶意扩展可能使用了域名抢注或仿冒手法，利用用户对流行扩展的信任。攻击向量尤其危险，因为 VSCode 扩展可以执行任意代码，从而使攻击者获得对开发环境的广泛访问权限。
+作者发布了 Rmux，这是一个基于 Rust 的终端复用器，提供与 tmux 兼容的命令行接口（约 90 个命令）以及用于结构化终端自动化的类型化异步 Rust SDK。 Rmux 通过提供稳定的窗格 ID 和定位器式等待，解决了终端自动化不可靠的痛点，使回放和调试比传统的 grep+sleep 循环更加可靠。 Rmux 在 Linux、macOS 和 Windows 上原生运行（使用真实的 ConPTY，而非 WSL），其 SDK 受 Playwright 的快照/等待模型启发，用于结构化自动化。
 
-hackernews · Timofeibu · May 20, 13:43 · [社区讨论](https://news.ycombinator.com/item?id=48207660)
+hackernews · shideneyu · May 21, 09:22 · [社区讨论](https://news.ycombinator.com/item?id=48219918)
 
-**背景**: VSCode 扩展是为微软流行的代码编辑器添加功能的插件，通过市场分发，安全审查有限。供应链攻击通过破坏受信任的依赖或工具来针对软件开发过程。扩展市场长期以来一直是一个已知的薄弱点，攻击者可以发布看似合法的恶意扩展。
+**背景**: 终端复用器允许在单个窗口中管理多个终端会话，流行的例子包括用 C 语言编写的 tmux。tmux 的自动化通常依赖输出抓取和 sleep 循环，这种方法可能不可靠。Rmux 用 Rust 从头构建了复用器，并添加了可编程层，以实现更可靠的自动化。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.aquasec.com/blog/can-you-trust-your-vscode-extensions/">Can You Trust Your VSCode Extensions ? - Aqua Security</a></li>
-<li><a href="https://www.cisa.gov/resources-tools/resources/defending-against-software-supply-chain-attacks">Defending Against Software Supply Chain Attacks - CISA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Terminal_multiplexer">Terminal multiplexer</a></li>
+<li><a href="https://github.com/microsoft/terminal/blob/main/doc/specs/#13000+-+In-process+ConPTY.md">terminal/doc/specs/#13000 - In-process ConPTY .md at main...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论表达了沮丧，指出微软拥有 VSCode、npm 和 GitHub 但未能全面解决问题。一位用户指出 VSCode 扩展是一个可怕的攻击向量，不断弹出非官方扩展的安装提示。另一位用户对黑客找到了足够长的正常运行时间窗口感到惊讶，并提到了一个特定的被入侵扩展（nx-console）。
+**社区讨论**: 评论指出，关于 tmux 是用 C++ 编写的说法是不正确的（它实际是 C 语言），而且网站看起来是 AI 生成的。不过，Playwright 风格快照/等待层受到赞扬，认为它可能解决智能体终端自动化的问题。
 
-**标签**: `#security`, `#github`, `#vscode`, `#supply chain attack`, `#malware`
+**标签**: `#terminal multiplexer`, `#Rust`, `#automation`, `#SDK`, `#Playwright-style`
 
 ---
 
 <a id="item-5"></a>
-## [科罗拉多州 SB051 修正案豁免开源项目](https://legiscan.com/CO/bill/SB051/2026) ⭐️ 8.0/10
+## [AI 训练是一种大规模未授权盗用](https://axelk.ee/ai-is-just-unauthorised-plagiarism-at-a-bigger-scale/) ⭐️ 8.0/10
 
-该豁免为州级年龄验证法中的开源保护开创先例，但社区怀疑论者认为，这暴露了法案的真实意图远超儿童安全范畴，可能导致未来过度扩张。 修正案将“受覆盖应用”定义为通过应用商店访问的消费者软件，但排除了不处理个人数据的应用或来自免费、公开代码仓库的应用，直接保护了开源软件。
+最近一篇评论文章指出，AI 公司使用受版权保护的网页内容训练大型语言模型的做法构成了前所未有的剽窃行为，对当前 AI 开发的合法性和伦理提出了质疑。 这凸显了关于 AI 训练是否属于合理使用或侵犯版权的持续法律和伦理辩论，可能对 AI 监管和创作者补偿的未来产生影响。 文章指出，虽然个人从网上学习无害，但 AI 大规模自动复制和重新利用会削弱原创内容的动力。社区讨论还提到，Meta 和 xAI 等公司因训练数据获取而面临诉讼。
 
-hackernews · ki4jgt · May 20, 20:28 · [社区讨论](https://news.ycombinator.com/item?id=48213651)
+hackernews · speckx · May 21, 13:38 · [社区讨论](https://news.ycombinator.com/item?id=48222383)
 
-**背景**: 美国多个州已提出年龄验证法案，通常针对成人内容网站和应用，以防止未成年人访问。科罗拉多州 SB051 最初措辞宽泛，可能对许多软件应用施加年龄验证要求，引发开源开发者对合规负担和隐私影响的担忧。
+**背景**: 大型语言模型（如 GPT-4）通过从互联网上抓取大量文本数据进行训练，通常未经版权持有者明确许可。合理使用是一种法律原则，允许在批评、评论、新闻报道、教学和研究等目的下未经许可有限使用受版权保护的材料。合理使用是否适用于 AI 训练目前正在法庭上争议中，几起引人注目的诉讼尚未判决。
 
-**社区讨论**: 社区评论普遍持怀疑和批评态度：declan_roberts 对软件中年龄验证的所谓“自发”运动表示厌恶；jwitthuhn 讽刺地感谢作者通过添加豁免暴露了法案的真实动机；HDBaseT 警告“温水煮青蛙”的局势；hungryhobbit 开玩笑说科罗拉多州将迎来一波色情相关的开源应用。
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Large_language_model">Large language model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fair_use">Fair use - Wikipedia</a></li>
 
-**标签**: `#legislation`, `#open source`, `#age verification`, `#privacy`, `#digital rights`
+</ul>
+</details>
+
+**社区讨论**: 评论显示观点分歧：一些人认为大规模抓取是企业的盗窃和寻租行为，另一些人则声称这与人类学习类似。有用户将这个问题比作‘窃国者侯，窃钩者诛’，凸显了双重标准。另一用户指出，一些公司通过 BitTorrent 盗版书籍用于训练，表明这是公然的版权侵犯。
+
+**标签**: `#AI`, `#copyright`, `#plagiarism`, `#ethics`, `#LLM`
 
 ---
 
 <a id="item-6"></a>
-## [Mozilla 告别 asm.js，全面拥抱 WebAssembly](https://spidermonkey.dev/blog/2026/05/20/saying-goodbye-to-asmjs.html) ⭐️ 8.0/10
+## [逆向工程苹果视频壁纸并开源](https://github.com/kageroumado/phosphene) ⭐️ 8.0/10
 
-Mozilla 宣布弃用 asm.js，标志着这一早期网络性能技术的终结，因为 WebAssembly 已完全取代了它。 此次弃用标志着网络平台底层编译目标的最终转变，从 JavaScript 子集转向专用二进制格式，简化了复杂应用的性能优化。 该公告于 2026 年 5 月 20 日在 SpiderMonkey 博客上发布，确认 asm.js 优化将在未来的 Firefox 版本中移除。
+Phosphene 的开发者逆向分析了苹果的私有框架 WallpaperExtensionKit.framework，使得 macOS 可以使用自定义视频壁纸。该工具现已开源。 这使得 macOS 用户能够使用任何视频作为壁纸，而此前该功能仅限于苹果预装的 Aerials。同时，它展示了成功逆向苹果私有框架的能力，可能启发类似项目。 Phosphene 使用 AVSampleBufferDisplayLayer 实现 PTS 偏移无缝循环播放，并根据热状态、电池电量、亮度和窗口遮挡智能调整播放。与苹果的 Aerials 不同，视频在桌面上持续播放，而不仅限于锁屏。
 
-hackernews · eqrion · May 20, 12:01 · [社区讨论](https://news.ycombinator.com/item?id=48206340)
+hackernews · kageroumado · May 20, 23:54 · [社区讨论](https://news.ycombinator.com/item?id=48215979)
 
-**背景**: Asm.js 是 JavaScript 的一个严格子集，旨在作为 C 和 C++等语言的编译目标，由 Mozilla 率先推出，使浏览器实现接近原生的性能。它是 WebAssembly 的前身，后者是一种由 W3C 标准化的二进制指令格式，得到所有主要浏览器的支持。asm.js 需要 JavaScript 解析开销，而 WebAssembly 提供紧凑的二进制格式，加载和执行更快。
+**背景**: 苹果的 WallpaperExtensionKit.framework 是一个私有框架，用于 macOS 系统设置中的壁纸选择。逆向该框架需要理解苹果如何加载和显示自定义壁纸。AVSampleBufferDisplayLayer 是一个 Core Animation 图层，可精确控制视频帧显示时间，而 PTS 偏移无缝循环确保流畅播放。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Asm.js">Asm.js</a></li>
-<li><a href="https://en.wikipedia.org/wiki/WebAssembly">WebAssembly</a></li>
-<li><a href="https://webassembly.org/">WebAssembly</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/avfoundation.avsamplebufferdisplaylayer?view=net-ios-26.2-10.0&viewFallbackFrom=xamarin-ios-sdk-12">AVSampleBufferDisplayLayer Class (AVFoundation) | Microsoft Learn</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Presentation_timestamp">Presentation timestamp - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员表达了既怀念又认可 asm.js 历史意义的复杂情感。重要评论强调了它在 Figma 作为 C++代码库起步中的作用，并提及 Gary Bernhardt 的预言性演讲《JavaScript 的诞生与死亡》。其他人则指出向 WebAssembly 的演进既苦乐参半又顺理成章。
+**社区讨论**: 评论者普遍持积极态度，许多人对此表示赞赏。一些人报告了最初的问题，但能够调整工具以适应需求。其他人指出，逆向工程壁纸框架是他们尝试过但未能成功的挑战。
 
-**标签**: `#asm.js`, `#WebAssembly`, `#Mozilla`, `#JavaScript`, `#web performance`
+**标签**: `#reverse engineering`, `#macOS`, `#video wallpaper`, `#open source`, `#Apple`
 
 ---
 
 <a id="item-7"></a>
-## [Railway 事件报告：GCP 账户暂停导致服务中断](https://blog.railway.com/p/incident-report-may-19-2026-gcp-account-outage) ⭐️ 8.0/10
+## [Knuth 关于字母 S 设计的经典论文](https://gwern.net/doc/design/typography/1980-knuth.pdf) ⭐️ 8.0/10
 
-Railway 发布了一份详细的事件报告，描述其 Google Cloud Platform (GCP) 账户于 2026 年 5 月 19 日被暂停，导致客户服务中断数小时。因此，Railway 计划将 Google Cloud 服务移出数据平面的热路径，降低其优先级。 该事件凸显了依赖单一云提供商（如 GCP）的重大风险，尤其是在账户可能无故被暂停的情况下。这为公司在云架构决策中分散依赖、防范突发提供商故障提供了警示。 账户暂停发生在 2026 年 5 月 19 日，持续数小时后才解决。Railway 表示计划将 Google Cloud 从其数据平面的关键路径中移除，仅用于次要或故障转移用途。
+Donald Knuth 于 1980 年在《数学智力》期刊上发表了题为《字母 S》的论文，通过字母 S 这一具体例子展示了他的 METAFONT 系统在算法字体设计中的应用。 这篇论文是计算字体设计的里程碑，展示了 Knuth 早期的工作，这些工作催生了 TeX 排版系统和 METAFONT，对数字字体设计和数学排版产生了深远影响。 该论文发表于 Springer 的《数学智力》期刊，与 David Ruelle 关于奇怪吸引子的文章并列。论文详细讲述了使用 METAFONT 的几何方程在数学上定义字母 S 所面临的挑战，展示了算法字体设计的复杂性。
 
-hackernews · 0xedb · May 20, 08:37 · [社区讨论](https://news.ycombinator.com/item?id=48204770)
+hackernews · bambax · May 20, 23:58 · [社区讨论](https://news.ycombinator.com/item?id=48216016)
 
-**背景**: Railway 是一个云部署平台，提供全栈云服务，用于部署 Web 应用、服务器、数据库等，具备自动缩放和监控功能。Google Cloud Platform (GCP) 是主要的云提供商，提供计算、存储和网络服务。该事件凸显了业界对 GCP 作为 B2B 服务提供商的可靠性和客户支持的日益担忧。
+**背景**: METAFONT 是 Donald Knuth 开发的一种描述语言和系统，用于通过几何方程和宏指令来定义点阵字体。它是作为 Knuth 的 TeX 排版系统的配套工具而创建的，Knuth 编写 TeX 是为了在 Linotype 机器不再可用时，保持其《计算机程序设计艺术》（TAOCP）系列书籍的排版质量。其“元”特性允许设计者指定高级参数，从而从单一源文件生成整个字体家族。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://grokipedia.com/page/Railway_software">Railway (software)</a></li>
-<li><a href="https://railway.com/">Railway | The all-in-one intelligent cloud provider</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metafont">Metafont</a></li>
+<li><a href="https://ctan.org/pkg/metafont">CTAN: Package Metafont</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论对 GCP 表达了强烈不满，一位用户称这“是对所有运行 GCP 的人的警告”，指出账户被随意暂停。另一位评论者赞扬 Railway 诚实的复盘及其迁移出 GCP 的决定，认为这是对架构失败的承认。一些人指出这并非孤立事件，并引用了 Google 自身关于类似问题的博客。
+**社区讨论**: 评论者提到了 METAFONT 的现代继承者，例如 Iosevka 的构建系统使用 PatEL（一种类似 Lisp 的领域特定语言）。有轶事透露，Knuth 创作 TeX 的动机是因为出版商无法再现 TAOCP 第一版的排版样式。爱好者们欣赏这篇论文的历史和技术深度。
 
-**标签**: `#GCP`, `#cloud reliability`, `#incident report`, `#outage`, `#trust`
-
----
-
-<a id="item-8"></a>
-## [SBCL：终极汇编代码试验板](https://pvk.ca/Blog/2014/03/15/sbcl-the-ultimate-assembly-code-breadboard/) ⭐️ 8.0/10
-
-本文展示了如何使用 Steel Bank Common Lisp (SBCL) 作为强大的宏汇编器来实现虚拟机，在运行时生成高效的 x86_64 汇编代码。 它展示了一种新颖的方法，将高级 Lisp 编译器重新用于低级汇编生成，可能简化虚拟机和 JIT 编译器的开发。这种技术可以提高性能并减少系统程序员的工作量。 作者使用八个 x86_64 寄存器来保存虚拟机栈槽，并手动计算每条指令版本的填充和对齐，这在传统汇编器中很繁琐。SBCL 的宏系统允许从生成的汇编代码中无缝调用 Common Lisp 代码。
-
-hackernews · yacin · May 20, 15:39 · [社区讨论](https://news.ycombinator.com/item?id=48209558)
-
-**背景**: Steel Bank Common Lisp (SBCL) 是一个高性能的 Common Lisp 编译器，可以直接生成本地机器码。宏汇编器是支持宏以简化重复任务的汇编器。传统上，编写虚拟机解释器需要手动优化的汇编代码或复杂的指令选择。本文利用 SBCL 的编译器动态生成优化的汇编代码。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://sbcl.org/">About - Steel Bank Common Lisp</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Macro_assembler">Macro assembler</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区成员反复称赞这篇文章的深度和技术洞察力。一位用户认为寄存器分配和对齐计算令人印象深刻，并指出用普通汇编器来做这些会很繁琐。另一位评论者链接了关于 sb-simd 的相关工作，展示了 SBCL 中更高级的 SIMD 操作。
-
-**标签**: `#SBCL`, `#Common Lisp`, `#assembly`, `#macro-assembler`, `#VM`
-
----
-
-<a id="item-9"></a>
-## [谷歌优先 AI 内容，威胁开放网络](https://tante.cc/2026/05/20/on-google-declaring-war-on-the-web/) ⭐️ 8.0/10
-
-谷歌正在调整其搜索算法，优先展示 AI 生成内容而非原创网页内容，打破了与内容创作者长期以来的共生关系。 这一变化威胁着数百万内容创作者的生计，并削弱了开放网络，因为原创内容将失去曝光和收入。 文章认为，谷歌此举是出于其他 AI 产品提供直接答案的竞争压力，但可能破坏网站允许其爬取内容的动机。
-
-hackernews · cdrnsf · May 20, 21:33 · [社区讨论](https://news.ycombinator.com/item?id=48214449)
-
-**背景**: 历史上，谷歌依靠爬取和索引网页内容来提供搜索结果，而网站则受益于谷歌带来的流量。如今，这种相互依赖正在被打破，谷歌越来越多地展示 AI 生成的摘要而非链接到原始来源。
-
-**社区讨论**: 社区评论表达担忧，认为只有大公司能从 AI 生成内容中获利，而独立创作者失去收入。一些用户已经设置墙阻止爬虫，其他人则质疑网站保持开放的长期动机。
-
-**标签**: `#Google`, `#open web`, `#AI`, `#content creation`, `#search`
-
----
-
-<a id="item-10"></a>
-## [Meta 在沙特和阿联酋屏蔽人权账户](https://www.alqst.org/ar/posts/1190) ⭐️ 8.0/10
-
-Meta 被指控在沙特阿拉伯和阿拉伯联合酋长国屏蔽人权倡导账户，以遵守当地的审查法律，从而有效地压制了批评当局的声音。 这种做法引发了关于企业参与国家主导审查的严重担忧，破坏了言论自由倡导，为在威权环境中运营的科技巨头树立了令人不安的先例。 被屏蔽的账户据称关注人权问题，而发布该报告的调查网站 alqst.org 本身在阿联酋被封锁，迫使用户使用 VPN 才能获取信息。
-
-hackernews · giuliomagnifico · May 20, 12:43 · [社区讨论](https://news.ycombinator.com/item?id=48206768)
-
-**背景**: 地理封锁是一种根据用户地理位置限制访问在线内容的技术。沙特阿拉伯和阿联酋等国家有法律要求社交媒体平台审查被视为非法或具有威胁性的内容，而像 Meta 这样的公司通常遵守这些法律，以避免被完全禁止进入这些市场。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://surfshark.com/blog/geo-blocking">What is geoblocking ? Definition and use cases - Surfshark</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 评论者表达了沮丧和无奈，有人指出即使阅读相关文章也需要 VPN。有人认为 Meta 别无选择只能遵守，而另一些人则批评该公司将利润置于原则之上，指出这是私有化利润、社会化损害的模式。
-
-**标签**: `#censorship`, `#Meta`, `#human rights`, `#social media`, `#free speech`
-
----
-
-<a id="item-11"></a>
-## [Cohere 发布高效 MoE 模型 Command A+](https://v.redd.it/3ez116nl0d2h1) ⭐️ 8.0/10
-
-Cohere 发布了其首个混合专家（MoE）大语言模型 Command A+，通过先进的量化技术优化，可在仅一台或两台 GPU 上高效推理。 该模型大幅降低硬件需求，使小型团队和开发者更容易使用大规模 AI，同时保持竞争力，并采用 Apache 2.0 开放权重许可证。 Command A+ 总参数量为 2180 亿，每 token 激活 250 亿参数，支持文本和图像输入，并采用定制量化方案，仅需两张 H100 GPU 即可运行。
-
-reddit · r/LocalLLaMA · nick_frosst · May 20, 21:25 · [社区讨论](https://www.reddit.com/r/LocalLLaMA/comments/1tizmar/re_what_ever_happened_to_coheres_commanda_series/)
-
-**背景**: 混合专家（MoE）是一种神经网络架构，每次输入仅激活部分参数，从而实现更大模型但计算成本更低。量化通过降低模型权重的精度（如从 FP32 到 INT4）来减少内存占用并加速推理。Cohere 之前的 Command 模型是密集模型；Command A+ 是其首个 MoE 模型。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Mixture_of_experts">Mixture of experts - Wikipedia</a></li>
-<li><a href="https://arxiv.org/abs/2103.13630">[2103.13630] A Survey of Quantization Methods for Efficient ... Quantization Techniques in Neural Network Inference A Survey On Neural Network Quantization | Proceedings of the ... Model Quantization: Concepts, Methods, and Why It Matters Quantization for Neural Networks - Lei Mao's Log Book</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: Reddit 社区普遍欢迎此次发布，称赞 Cohere 回归开放权重模型。有用户指出缺乏与 MiniMax、Mimo 等竞争对手的标准基准对比，对竞争力表示担忧。其他用户则对 GGUF 支持和 llama.cpp 兼容性表示兴趣。
-
-**标签**: `#Cohere`, `#large language models`, `#MoE`, `#efficient inference`, `#open weights`
-
----
-
-<a id="item-12"></a>
-## [Qwen 3.6 35B GGUF：NTP 与 MTP 基准测试结果](https://i.redd.it/xjctv0okab2h1.png) ⭐️ 8.0/10
-
-ByteShape 发布了 Qwen 3.6 35B 的两个 GGUF 量化系列：标准 NTP（Next Token Prediction）和 MTP（Multi-Token Prediction），并在多种 GPU 和 CPU 上进行了详细基准测试。 这项基准测试为本地 LLM 用户提供了何时使用 MTP 的实用指导，显示 GPU 加速 20–40%，但警告 CPU MTP 无益，有助于优化推理性能。 MTP 加速高度依赖于工作负载；测试中 CPU MTP 不具吸引力，因此建议 CPU 用户坚持使用 NTP。最大的 NTP 量化在质量和速度上难以被超越，且因答案格式问题排除了 MMLU。
-
-reddit · r/LocalLLaMA · enrique-byteshape · May 20, 15:42 · [社区讨论](https://www.reddit.com/r/LocalLLaMA/comments/1tipihx/qwen_36_35b_gguf_ntp_vs_mtp_quantization_results/)
-
-**背景**: GGUF 是一种针对本地推理优化的量化 LLM 模型文件格式。NTP（Next Token Prediction）是标准的自回归解码，而 MTP（Multi-Token Prediction）是一种推测解码（Speculative Decoding），其中草稿模型提出多个令牌，并行验证，可能提高吞吐量。推测解码可以在不改变输出分布的情况下，通过每步生成多个令牌来加速生成。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Speculative_decoding">Speculative decoding</a></li>
-<li><a href="https://github.com/AtomicBot-ai/atomic-llama-cpp-turboquant">GitHub - AtomicBot-ai/atomic-llama-cpp-turboquant: llama.cpp fork with TurboQuant WHT-rotated KV cache & weight compression + Gemma 4 MTP and Qwen 3.6 NextN speculative decoding (+30-50% throughput). · GitHub</a></li>
-<li><a href="https://dredyson.com/mtp-llama-cpp-with-qwen3-6-27b-a-complete-beginners-step-by-step-guide-to-speculative-decoding-turboquant-and-running-multiple-models-on-limited-gpu-vram/">MTP + llama.cpp with Qwen3.6-27B: A Complete Beginner's Step-by-Step Guide to Speculative Decoding, TurboQuant, and Running Multiple Models on Limited GPU VRAM - Dre Dyson</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区反响积极，用户表示感谢并对其他模型（如 Qwen 3.6 27B、Q6 GGUF）的类似基准测试感兴趣。部分用户确认了他们在 CPU 上 MTP 减速的发现，并请求了解所使用的 llama-server 命令细节。
-
-**标签**: `#quantization`, `#GGUF`, `#Qwen`, `#speculative decoding`, `#LLM inference`
-
----
-
-<a id="item-13"></a>
-## [llama.cpp 将 MTP 草案路径移至后端采样以提升速度](https://github.com/ggml-org/llama.cpp/pull/23287) ⭐️ 8.0/10
-
-ggml-org/llama.cpp 的合并请求 #23287 通过将多令牌预测（MTP）草案路径移至后端采样，改进了 MTP 性能。 这一优化加速了 llama.cpp（一个广泛使用的开源 LLM 推理引擎）中的推测解码，直接惠及使用本地 LLM 的开发者社区。 后端采样利用 GPU 或其他硬件加速器更快地生成草稿令牌，减少多步预测中的延迟。此变更是 llama.cpp 中 MTP 支持快速发展的一个部分。
-
-reddit · r/LocalLLaMA · jacek2023 · May 20, 17:14 · [社区讨论](https://www.reddit.com/r/LocalLLaMA/comments/1tis73j/move_to_backend_sampling_for_mtp_draft_path_by/)
-
-**背景**: 多令牌预测（MTP）是一种推测解码技术，其中草稿模型同时预测多个未来令牌，然后由主模型验证。后端采样是指在计算后端（如 GPU）上执行令牌采样，而非 CPU，从而减少数据传输开销。此 PR 将 MTP 草案采样移至后端以提高性能。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://github.com/ggml-org/llama.cpp">GitHub - ggml-org/ llama . cpp : LLM inference in C/C++ · GitHub</a></li>
-<li><a href="https://arxiv.org/abs/2509.18362">[2509.18362] FastMTP: Accelerating LLM Inference with ...</a></li>
-<li><a href="https://www.tweakedgeek.com/topics/llama-cpp">llama . cpp – Tweaked Geek: Practical AI & Tech, Filtered for Signal</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 开发者们反应热情且幽默，指出由于频繁变更，他们当天不得不多次重新编译 llama.cpp。一位用户评论该项目充满活力的社区超越了其他推理引擎，另一位则开玩笑地抱怨需要重新运行基准测试。
-
-**标签**: `#llama.cpp`, `#inference`, `#MTP`, `#performance`, `#GPU sampling`
-
----
-
-<a id="item-14"></a>
-## [资深工程师分享使用 Claude Code 的“氛围编码”规则](https://www.reddit.com/r/ClaudeAI/comments/1tj2i90/im_a_software_engineer_with_a_decade_of/) ⭐️ 8.0/10
-
-一位拥有十年经验的软件工程师分享了使用 Claude Code 成功进行“氛围编码”副业项目的规则，强调规划和理解而非阅读代码。 这为日益增长的 AI 辅助编程趋势提供了实用且稳健的指导，帮助新手和有经验的开发者有效使用 AI，同时保持对项目的控制。 核心规则包括：从规划模式开始，彻底阅读并理解计划，将过大的计划分解为可消化的部分，以及在每个计划完成后提交到 git。作者使用 Claude Code，但这些原则与具体工具无关。
-
-reddit · r/ClaudeAI · thelocalnative · May 20, 23:15
-
-**背景**: “氛围编码”（Vibe coding）是 Andrej Karpathy 于 2025 年 2 月提出的术语，指一种 AI 辅助的软件开发方式，开发者很少审查 AI 生成的代码。Claude Code 是 Anthropic 开发的智能编码工具，可集成到终端、IDE 等环境中。其“规划模式”（Plan Mode）功能通过先生成详细计划再执行，帮助处理复杂多步骤任务。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe coding</a></li>
-<li><a href="https://code.claude.com/docs/en/overview">Overview - Claude Code Docs</a></li>
-<li><a href="https://claudeai.dev/docs/mechanics/foundation/plan-mode/">Plan Mode | Claude AI Dev</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 帖子评论普遍积极，称赞其实用建议，尤其是保持计划短小的规则。有用户推荐使用 Superpowers 技能集实现工作流程的可重复性，还有建议将代理范围保持得尽可能小。也有不同声音质疑为何要阅读计划，但作者的方法总体上获得支持。
-
-**标签**: `#AI-assisted coding`, `#Claude Code`, `#vibe coding`, `#software engineering`, `#workflow`
+**标签**: `#typography`, `#Donald Knuth`, `#METAFONT`, `#TeX`, `#algorithmic design`
 
 ---
